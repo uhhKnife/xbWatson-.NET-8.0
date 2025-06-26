@@ -31,7 +31,7 @@ Decompilation of xbWatson included in the Xbox 360 SDK, rebuilt for .NET 8.0 wit
 To create a single-file standalone executable, run the following command in **Developer PowerShell for VS 2022**:
 
 ```powershell
-dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true
+dotnet publish -c Release -r win-x86 --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true
 ```
 
 ## Features
