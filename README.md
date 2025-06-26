@@ -24,7 +24,7 @@ Decompilation of xbWatson included in the Xbox 360 SDK, rebuilt for .NET 8.0 wit
 1. Open the solution (`xbWatson.sln`) in **Visual Studio 2022**.
 2. Ensure the target framework is set to **.NET 8.0**.
 3. Build the solution in **Release** mode.
-4. The output will be located in `bin\Release\net8.0-windows8.0`.
+4. The output will be located in `bin\Release\x86\net8.0-windows8.0`.
 
 ## Publish Standalone EXE
 
@@ -33,6 +33,7 @@ To create a single-file standalone executable, run the following command in **De
 ```powershell
 dotnet publish -c Release -r win-x86 --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true
 ```
+The output will be located in `\bin\x86\Release\net8.0-windows8.0\win-x86\publish`.
 
 ## Features
 - Modernized for .NET 8.0 and WinForms
