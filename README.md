@@ -28,8 +28,6 @@ Decompilation of xbWatson included in the Xbox 360 SDK, rebuilt for .NET 8.0 wit
 
 ## Publish Standalone EXE
 
-To create a single-file standalone executable, run the following command in **Developer PowerShell for VS 2022**:
-
 To create a single-file standalone executable, run one of the following in **Developer PowerShell for VS 2022**:
 
 - If you want it to run anywhere without .NET installed (larger EXE):
@@ -45,7 +43,7 @@ The output will be located in `\bin\x86\Release\net8.0-windows8.0\win-x86\publis
 ## Features
 - Modernized for .NET 8.0 and WinForms
 - Compatible with modern Windows versions
-- Intended for use with Xbox 360 developer consoles for log monitoring and debugging
+- Intended for use with Xbox 360 developer/rgh/jtag consoles for log monitoring and debugging
 
 ## Notes
 - Based on the original xbWatson tool bundled with the Xbox 360 XDK.
