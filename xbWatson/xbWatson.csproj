@@ -17,6 +17,7 @@
     <Product>xbWatson</Product>
     <Platforms>AnyCPU;x86</Platforms>
     <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
