@@ -192,7 +192,7 @@ namespace xbWatson
 			}
 			for (int i = 0; i < this.consoleNames.Count; i++)
 			{
-				this.xbWatsonRegKey.SetValue((string)this.consoleNames[i], this.IsConsoleSelected[i]);
+				this.xbWatsonRegKey.SetValue((string)this.consoleNames[i], this.IsConsoleSelected[i] ? "True" : "False");
 			}
 			base.Close();
 		}
@@ -209,7 +209,7 @@ namespace xbWatson
 		private void checkedListBoxMachines_ItemCheck(object sender, ItemCheckEventArgs e)
 		{
 			int index = e.Index;
-			int num = this.consoleNames.IndexOf(this.checkedListBoxMachines.Items[index]);
+			int num = this.consoleNames.IndexOf(this.checkedListBoxMachines.Items[index].ToString());
 			if (num != -1)
 			{
 				this.IsConsoleSelected[num] = (e.NewValue == CheckState.Checked);
