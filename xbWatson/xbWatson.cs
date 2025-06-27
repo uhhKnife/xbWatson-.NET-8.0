@@ -218,22 +218,33 @@ namespace xbWatson
 			contextMenuAddTimestamps.Checked = fTimestamp;
 		}
 
+		private bool confirmationShown = false;
+
 		private void xbWatson_Closing(object sender, CancelEventArgs e)
 		{
 			if (isDisconnecting) return;
-			var resourceManager = new ResourceManager("xbWatson.Strings", GetType().Assembly);
-			var text = resourceManager.GetString("DisconnectConfirmation") + ConsoleName + "?";
-			switch (MessageBox.Show(this, text, Name, MessageBoxButtons.OKCancel))
+
+			if (!confirmationShown)
 			{
-				case DialogResult.OK:
+				confirmationShown = true;
+				var resourceManager = new ResourceManager("xbWatson.Strings", GetType().Assembly);
+				var text = resourceManager.GetString("DisconnectConfirmation") + ConsoleName + "?";
+				var result = MessageBox.Show(this, text, Name, MessageBoxButtons.OKCancel);
+				if (result == DialogResult.OK)
+				{
+					isDisconnecting = true;
 					Disconnect();
 					MainWindow.RemoveFromList(this);
-					return;
-				case DialogResult.Cancel:
+				}
+				else
+				{
 					e.Cancel = true;
-					return;
-				default:
-					return;
+				}
+			}
+			else
+			{
+				e.Cancel = true;
+				confirmationShown = false; // Reset for next time
 			}
 		}
 
