@@ -5,13 +5,9 @@ using XDevkit;
 
 namespace xbWatson
 {
-	internal abstract class CrashHandler : BreakHandler
+	internal abstract class CrashHandler(XboxConsole console, xbWatson watson) : BreakHandler(console, watson)
 	{
-		protected CrashHandler(XboxConsole console, xbWatson watson) : base(console, watson)
-		{
-		}
-
-		protected abstract string ActionValueName { get; }
+        protected abstract string ActionValueName { get; }
 
 		protected abstract string EventName { get; }
 
@@ -84,7 +80,7 @@ namespace xbWatson
 					this.Continue(eventInformation);
 					break;
 				case DialogResult.No:
-					this.watson.DumpLog(this.watson, this.console);
+                        xbWatson.DumpLog(this.watson, this.console);
 					this.HandleEvent(eventInformation);
 					break;
 				}
@@ -98,8 +94,7 @@ namespace xbWatson
 		private void Continue(IXboxEventInfo eventInformation)
 		{
 			eventInformation.Info.Thread.Continue(true);
-			bool flag;
-			this.console.DebugTarget.Go(out flag);
-		}
+            console.DebugTarget.Go(out bool flag);
+        }
 	}
 }

@@ -115,10 +115,10 @@ namespace xbWatson
         }
 
         // Revert dynamic changes and fix event handler assignment
-        private XboxManagerClass xManager;
-        private xbWatson xboxWatson;
-        private XboxConsole xboxConsole;
-        private IXboxDebugTarget xDebugTarget;
+        private readonly XboxManagerClass xManager;
+        private readonly xbWatson xboxWatson;
+        private readonly XboxConsole xboxConsole;
+        private readonly IXboxDebugTarget xDebugTarget;
         private XboxEvents_OnStdNotifyEventHandler StdNotifyEventHandler;
         private bool fConnected;
     }

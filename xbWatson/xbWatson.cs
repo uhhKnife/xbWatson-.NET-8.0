@@ -92,14 +92,16 @@ namespace xbWatson
 			return fTimestamp;
 		}
 
-		public bool DumpLog(IWin32Window owner, IXboxConsole xboxConsole)
+		public static bool DumpLog(IWin32Window owner, IXboxConsole xboxConsole)
 		{
-			SaveFileDialog saveFileDialog = new SaveFileDialog();
-			saveFileDialog.DefaultExt = "dmp";
-			saveFileDialog.Filter = "MiniDump (*.dmp)|*.dmp|MiniDump with heap (*.dmp)|*.dmp";
-			saveFileDialog.FilterIndex = 1;
-			saveFileDialog.OverwritePrompt = false;
-			DialogResult dialogResult = saveFileDialog.ShowDialog(owner);
+            SaveFileDialog saveFileDialog = new()
+            {
+                DefaultExt = "dmp",
+                Filter = "MiniDump (*.dmp)|*.dmp|MiniDump with heap (*.dmp)|*.dmp",
+                FilterIndex = 1,
+                OverwritePrompt = false
+            };
+            DialogResult dialogResult = saveFileDialog.ShowDialog(owner);
 			if (dialogResult == DialogResult.OK && saveFileDialog.FileName.Length > 0)
 			{
 				if (saveFileDialog.FilterIndex == 1)
@@ -139,12 +141,14 @@ namespace xbWatson
 
 		public void SaveLog()
 		{
-			SaveLogFile = new SaveFileDialog();
-			SaveLogFile.DefaultExt = "txt";
-			SaveLogFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-			SaveLogFile.FilterIndex = 1;
-			SaveLogFile.OverwritePrompt = true;
-			if (SaveLogFile.ShowDialog(this) == DialogResult.OK && SaveLogFile.FileName.Length > 0)
+            SaveLogFile = new SaveFileDialog
+            {
+                DefaultExt = "txt",
+                Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 1,
+                OverwritePrompt = true
+            };
+            if (SaveLogFile.ShowDialog(this) == DialogResult.OK && SaveLogFile.FileName.Length > 0)
 			{
 				log.SaveFile(SaveLogFile.FileName, RichTextBoxStreamType.PlainText);
 			}
@@ -248,7 +252,7 @@ namespace xbWatson
 		private bool fTimestamp;
 		private readonly xbWatsonUI MainWindow;
 		private string consoleName;
-		private CancelEventHandler ClosingEventHandler;
+		private readonly CancelEventHandler ClosingEventHandler;
 		private DebugManager xboxDebugManager;
 		private bool isDisconnecting = false;
 	}

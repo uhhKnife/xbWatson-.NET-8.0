@@ -3,13 +3,9 @@ using XDevkit;
 
 namespace xbWatson
 {
-	internal class ExceptionHandler : CrashHandler
+	internal class ExceptionHandler(XboxConsole console, xbWatson watson) : CrashHandler(console, watson)
 	{
-		public ExceptionHandler(XboxConsole console, xbWatson watson) : base(console, watson)
-		{
-		}
-
-		protected override string ActionValueName
+        protected override string ActionValueName
 		{
 			get
 			{

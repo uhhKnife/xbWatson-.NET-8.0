@@ -3,13 +3,9 @@ using XDevkit;
 
 namespace xbWatson
 {
-	internal class RipHandler : CrashHandler
+	internal class RipHandler(XboxConsole console, xbWatson watson) : CrashHandler(console, watson)
 	{
-		public RipHandler(XboxConsole console, xbWatson watson) : base(console, watson)
-		{
-		}
-
-		protected override string ActionValueName
+        protected override string ActionValueName
 		{
 			get
 			{

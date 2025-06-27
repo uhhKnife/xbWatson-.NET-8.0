@@ -13,8 +13,8 @@ namespace xbWatson
 		{
 			this.InitializeComponent();
 			FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(base.GetType().Assembly.Location);
-			ResourceManager resourceManager = new ResourceManager(typeof(xbWatsonUI));
-			ResourceManager resourceManager2 = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
+			ResourceManager resourceManager = new(typeof(xbWatsonUI));
+			ResourceManager resourceManager2 = new("xbWatson.Strings", base.GetType().Assembly);
 			this.label1.Text = resourceManager2.GetString("Version") + versionInfo.FileVersion + "\n" + versionInfo.LegalCopyright;
 			base.ShowDialog(xboxWatson);
 			resourceManager.ReleaseAllResources();

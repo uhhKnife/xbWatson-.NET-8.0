@@ -17,8 +17,8 @@ namespace xbWatson
 		{
 			resources = new ResourceManager("xbWatson.Strings", GetType().Assembly);
 			InitializeComponent();
-			consoleNames = new List<string>();
-			IsConsoleSelected = new List<bool>();
+			consoleNames = [];
+			IsConsoleSelected = [];
 			InitializeConsoleList();
 		}
 
@@ -195,10 +195,7 @@ namespace xbWatson
 
 		private void buttonCancel_Click(object sender, EventArgs e)
 		{
-			if (this.xbWatsonRegKey is not null)
-			{
-				this.xbWatsonRegKey.Close();
-			}
+			this.xbWatsonRegKey?.Close();
 			base.Close();
 		}
 

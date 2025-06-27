@@ -6,11 +6,9 @@ using XDevkit;
 
 namespace xbWatson
 {
-	internal class AssertHandler : BreakHandler
+	internal class AssertHandler(XboxConsole console, xbWatson watson) : BreakHandler(console, watson)
 	{
-		public AssertHandler(XboxConsole console, xbWatson watson) : base(console, watson) { }
-
-		protected override string GetDialogTitle() => $"Xbox Assertion Failed - {console.RunningProcessInfo.ProgramName}";
+        protected override string GetDialogTitle() => $"Xbox Assertion Failed - {console.RunningProcessInfo.ProgramName}";
 
 		protected override string GetDialogMessage(IXboxEventInfo information) => information.Info.Message;
 
@@ -109,9 +107,8 @@ namespace xbWatson
 				}
 				while (num4 > 0);
 				eventInformation.Info.Thread.Continue(true);
-				bool flag3;
-				this.console.DebugTarget.Go(out flag3);
-			}
+                this.console.DebugTarget.Go(out bool flag3);
+            }
 			catch (Exception ex4)
 			{
 				this.watson.Log(ex4.Message);

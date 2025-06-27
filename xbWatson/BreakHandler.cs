@@ -5,19 +5,13 @@ using XDevkit;
 
 namespace xbWatson
 {
-	internal abstract class BreakHandler
-	{
-		protected BreakHandler(XboxConsole console, xbWatson watson)
-		{
-			this.console = console;
-			this.watson = watson;
-		}
-
-		protected DialogResult ShowDialog(IXboxEventInfo eventInformation, string middleButtonText)
+	internal abstract class BreakHandler(XboxConsole console, xbWatson watson)
+    {
+        protected DialogResult ShowDialog(IXboxEventInfo eventInformation, string middleButtonText)
 		{
 			string title = string.Format("{0} [{1}]", this.GetDialogTitle(), this.console.Name);
 			string dialogMessage = this.GetDialogMessage(eventInformation);
-			EventDialog eventDialog = new EventDialog(title, dialogMessage, middleButtonText);
+			EventDialog eventDialog = new(title, dialogMessage, middleButtonText);
 			return eventDialog.ShowDialog(this.watson);
 		}
 
@@ -32,8 +26,8 @@ namespace xbWatson
 			this.console.Reboot(null, null, null, (XboxRebootFlags)2);
 		}
 
-		protected XboxConsole console;
+		protected XboxConsole console = console;
 
-		protected xbWatson watson;
+		protected xbWatson watson = watson;
 	}
 }

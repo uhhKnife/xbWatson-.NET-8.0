@@ -48,9 +48,11 @@ namespace xbWatson
 
 		private void buttonPath_Click(object sender, EventArgs e)
 		{
-			FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-			folderBrowserDialog.ShowNewFolderButton = true;
-			DialogResult dialogResult = folderBrowserDialog.ShowDialog(this);
+            FolderBrowserDialog folderBrowserDialog = new()
+            {
+                ShowNewFolderButton = true
+            };
+            DialogResult dialogResult = folderBrowserDialog.ShowDialog(this);
 			if (dialogResult == DialogResult.OK)
 			{
 				this.textBoxPath.Text = folderBrowserDialog.SelectedPath;
