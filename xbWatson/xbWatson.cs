@@ -72,7 +72,7 @@ namespace xbWatson
 
 		public void Log(string logText)
 		{
-			if (logText == null)
+			if (logText is null)
 			{
 				return;
 			}
@@ -124,7 +124,7 @@ namespace xbWatson
 		public bool DumpLog(IXboxConsole xboxConsole)
 		{
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				this.Log("Cannot open registry for Dump location");
 				return false;

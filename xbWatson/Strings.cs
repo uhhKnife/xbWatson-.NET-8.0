@@ -27,7 +27,7 @@ namespace xbWatson
 					ResourceManager resourceManager = new ResourceManager("xbWatson.Strings", typeof(Strings).Assembly);
 					Strings.resourceMan = resourceManager;
 				}
-				return Strings.resourceMan;
+				return Strings.resourceMan!;
 			}
 		}
 
@@ -36,7 +36,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.resourceCulture;
+				return Strings.resourceCulture!;
 			}
 			set
 			{
@@ -48,7 +48,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("BreakButtonText", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("BreakButtonText", Strings.resourceCulture)!;
 			}
 		}
 
@@ -56,7 +56,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ChangesSaveError", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ChangesSaveError", Strings.resourceCulture)!;
 			}
 		}
 
@@ -64,7 +64,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ConsoleConnectionError", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ConsoleConnectionError", Strings.resourceCulture)!;
 			}
 		}
 
@@ -72,7 +72,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ConsoleEntryRequest", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ConsoleEntryRequest", Strings.resourceCulture)!;
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ConsoleNotAvailable", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ConsoleNotAvailable", Strings.resourceCulture)!;
 			}
 		}
 
@@ -88,7 +88,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ConsolePresentError", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ConsolePresentError", Strings.resourceCulture)!;
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("ConsoleSelectRequest", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("ConsoleSelectRequest", Strings.resourceCulture)!;
 			}
 		}
 
@@ -104,7 +104,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("DefaultXenonAbsent", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("DefaultXenonAbsent", Strings.resourceCulture)!;
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("DisconnectConfirmation", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("DisconnectConfirmation", Strings.resourceCulture)!;
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("PathEntryRequest", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("PathEntryRequest", Strings.resourceCulture)!;
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("RegistrCreationError", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("RegistrCreationError", Strings.resourceCulture)!;
 			}
 		}
 
@@ -136,7 +136,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("RegistryAccessError", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("RegistryAccessError", Strings.resourceCulture)!;
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("SaveCrashDumpButtonText", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("SaveCrashDumpButtonText", Strings.resourceCulture)!;
 			}
 		}
 
@@ -152,12 +152,12 @@ namespace xbWatson
 		{
 			get
 			{
-				return Strings.ResourceManager.GetString("Version", Strings.resourceCulture);
+				return Strings.ResourceManager.GetString("Version", Strings.resourceCulture)!;
 			}
 		}
 
-		private static ResourceManager resourceMan;
+		private static ResourceManager? resourceMan;
 
-		private static CultureInfo resourceCulture;
+		private static CultureInfo? resourceCulture;
 	}
 }

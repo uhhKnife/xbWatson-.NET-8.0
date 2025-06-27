@@ -31,10 +31,10 @@ namespace xbWatson
 		private void InitializeOptions()
 		{
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				registryKey = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-				if (registryKey == null)
+				if (registryKey is null)
 				{
 					MessageBox.Show(this, this.resources.GetString("RegistrCreationError"));
 					return;
@@ -155,7 +155,7 @@ namespace xbWatson
 		private void CheckForConsoles()
 		{
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Consoles");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				this.Cursor = Cursors.WaitCursor;
 				ConsoleConnectionManagerDialog consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog();
@@ -171,7 +171,7 @@ namespace xbWatson
 		{
 			this.Cursor = Cursors.WaitCursor;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Consoles");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				this.Cursor = Cursors.Default;
 				return;
@@ -186,20 +186,20 @@ namespace xbWatson
 				else if (registryKey.GetValue(valueNames[i]).Equals("False") && this.ConnectedConsolesList.Contains(valueNames[i]))
 				{
 					xbWatson xbWatson = this.GetxbWatsonFromName(valueNames[i]);
-					if (xbWatson != null)
+					if (xbWatson is not null)
 					{
 						this.RemoveFromList(xbWatson);
 						this.StopConsole(xbWatson);
 					}
 				}
 			}
-			object[] array = this.ConnectedConsolesList.ToArray();
+			string[] array = this.ConnectedConsolesList.ToArray();
 			for (int j = 0; j < array.Length; j++)
 			{
-				if (!this.ListContains(valueNames, (string)array[j]))
+				if (!this.ListContains(valueNames, array[j]))
 				{
-					xbWatson xbWatson2 = this.GetxbWatsonFromName((string)array[j]);
-					if (xbWatson2 != null)
+					xbWatson xbWatson2 = this.GetxbWatsonFromName(array[j]);
+					if (xbWatson2 is not null)
 					{
 						this.RemoveFromList(xbWatson2);
 						this.StopConsole(xbWatson2);
@@ -222,7 +222,7 @@ namespace xbWatson
 		private void StartConsole(string name)
 		{
 			xbWatson xbWatson = new xbWatson(this, name);
-			if (xbWatson == null)
+			if (xbWatson is null)
 			{
 				string text = this.resources.GetString("ConsoleConnectionError") + name;
 				MessageBox.Show(this, text);
@@ -294,7 +294,7 @@ namespace xbWatson
 		public void UpdateChecks()
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				this.menuEditLimitBufferLength.Checked = xbWatson.IsLimitBufferLengthChecked();
 				this.menuAddTimestamps.Checked = xbWatson.IsAddTimestampsChecked();
@@ -372,7 +372,7 @@ namespace xbWatson
 			this.menuConfigureOnAssertRestart.Checked = false;
 			this.menuConfigureOnAssertPrompt.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -392,7 +392,7 @@ namespace xbWatson
 			this.menuConfigureOnAssertRestart.Checked = false;
 			this.menuConfigureOnAssertBreak.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -412,7 +412,7 @@ namespace xbWatson
 			this.menuConfigureOnAssertRestart.Checked = false;
 			this.menuConfigureOnAssertContinue.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -432,7 +432,7 @@ namespace xbWatson
 			this.menuConfigureOnAssertContinue.Checked = false;
 			this.menuConfigureOnAssertRestart.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -452,7 +452,7 @@ namespace xbWatson
 			this.menuConfigureOnExceptionContinue.Checked = false;
 			this.menuConfigureOnExceptionPrompt.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -472,7 +472,7 @@ namespace xbWatson
 			this.menuConfigureOnExceptionContinue.Checked = false;
 			this.menuConfigureOnExceptionDump.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -492,7 +492,7 @@ namespace xbWatson
 			this.menuConfigureOnExceptionPrompt.Checked = false;
 			this.menuConfigureOnExceptionContinue.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -512,7 +512,7 @@ namespace xbWatson
 			this.menuConfigureOnExceptionContinue.Checked = false;
 			this.menuConfigureOnExceptionRestart.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -532,7 +532,7 @@ namespace xbWatson
 			this.menuConfigureOnRIPContinue.Checked = false;
 			this.menuConfigureOnRIPPrompt.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -552,7 +552,7 @@ namespace xbWatson
 			this.menuConfigureOnRIPContinue.Checked = false;
 			this.menuConfigureOnRIPDump.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -572,7 +572,7 @@ namespace xbWatson
 			this.menuConfigureOnRIPPrompt.Checked = false;
 			this.menuConfigureOnRIPContinue.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -592,7 +592,7 @@ namespace xbWatson
 			this.menuConfigureOnRIPContinue.Checked = false;
 			this.menuConfigureOnRIPRestart.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -610,7 +610,7 @@ namespace xbWatson
 			this.menuConfigureDumpFormatFullHeap.Checked = false;
 			this.menuConfigureDumpFormatMini.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -628,7 +628,7 @@ namespace xbWatson
 			this.menuConfigureDumpFormatMini.Checked = false;
 			this.menuConfigureDumpFormatFullHeap.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -660,7 +660,7 @@ namespace xbWatson
 			this.menuConfigureAfterDumpContinue.Checked = true;
 			this.menuConfigureAfterDumpRestart.Checked = false;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -678,7 +678,7 @@ namespace xbWatson
 			this.menuConfigureAfterDumpContinue.Checked = false;
 			this.menuConfigureAfterDumpRestart.Checked = true;
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -705,7 +705,7 @@ namespace xbWatson
 		private void menuConfigureConnectOnStart_Click(object sender, EventArgs e)
 		{
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -730,7 +730,7 @@ namespace xbWatson
 		private void menuFileSaveAs_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.SaveLog();
 			}
@@ -739,7 +739,7 @@ namespace xbWatson
 		private void menuEditCopySelection_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.logCopy();
 			}
@@ -748,7 +748,7 @@ namespace xbWatson
 		private void menuEditCopyContents_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.logCopy();
 			}
@@ -757,7 +757,7 @@ namespace xbWatson
 		private void menuEditClearWindow_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.logClear();
 			}
@@ -766,7 +766,7 @@ namespace xbWatson
 		private void menuEditSelectAll_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.logSelectAll();
 			}
@@ -775,7 +775,7 @@ namespace xbWatson
 		private void menuEditLimitBufferLength_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.LimitBufferLength();
 			}
@@ -784,7 +784,7 @@ namespace xbWatson
 		private void menuAddTimestamps_Click(object sender, EventArgs e)
 		{
 			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson != null)
+			if (xbWatson is not null)
 			{
 				xbWatson.AddTimestamps();
 			}

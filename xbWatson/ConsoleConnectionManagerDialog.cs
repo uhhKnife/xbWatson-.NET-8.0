@@ -17,16 +17,15 @@ namespace xbWatson
 		{
 			this.resources = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
 			this.InitializeComponent();
-			this.consoleNames = new List<string>();
-			this.IsConsoleSelected = new List<bool>();
-			this.DisabledConsoles = new List<string>();
+			this.consoleNames = [];
+			this.IsConsoleSelected = [];
 			this.InitializeConsoleList();
 		}
 
 		public void InitializeConsoleList()
 		{
 			this.xbWatsonRegKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Consoles");
-			if (this.xbWatsonRegKey == null)
+			if (this.xbWatsonRegKey is null)
 			{
 				this.Cursor = Cursors.WaitCursor;
 				this.RestoreDefaults();
@@ -49,10 +48,10 @@ namespace xbWatson
 			{
 				try
 				{
-					XboxManagerClass xboxManagerClass = new XboxManagerClass();
-					IXboxConsole xboxConsole = xboxManagerClass.OpenConsole((string)this.consoleNames[i]);
+					XboxManagerClass xboxManagerClass = new();
+					IXboxConsole xboxConsole = xboxManagerClass.OpenConsole(this.consoleNames[i]);
 					xboxConsole.FindConsole(2U, 50U);
-					this.checkedListBoxMachines.Items.Add(this.consoleNames[i], (bool)this.IsConsoleSelected[i]);
+					this.checkedListBoxMachines.Items.Add(this.consoleNames[i], this.IsConsoleSelected[i]);
 					while (Marshal.ReleaseComObject(xboxConsole) != 0)
 					{
 					}
@@ -69,21 +68,21 @@ namespace xbWatson
 		{
 			this.XenonShellExtensionRegKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbshlext\\Consoles");
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(base.Parent, this.resources.GetString("DefaultXenonAbsent"));
 				registryKey.Close();
 				return;
 			}
 			string text = (string)registryKey.GetValue("XboxName");
-			if (this.XenonShellExtensionRegKey == null && text == null)
+			if (this.XenonShellExtensionRegKey is null && text is null)
 			{
 				MessageBox.Show(base.Parent, this.resources.GetString("DefaultXenonAbsent"));
 				return;
 			}
 			this.consoleNames.Clear();
 			this.IsConsoleSelected.Clear();
-			if (this.XenonShellExtensionRegKey != null)
+			if (this.XenonShellExtensionRegKey is not null)
 			{
 				string[] valueNames = this.XenonShellExtensionRegKey.GetValueNames();
 				for (int i = 1; i < valueNames.Length; i++)
@@ -94,7 +93,7 @@ namespace xbWatson
 				}
 				this.XenonShellExtensionRegKey.Close();
 			}
-			if (this.consoleNames.Count == 0 && text != null)
+			if (this.consoleNames.Count == 0 && text is not null)
 			{
 				this.consoleNames.Add(text);
 				this.IsConsoleSelected.Add(true);
@@ -107,7 +106,7 @@ namespace xbWatson
 		{
 			try
 			{
-				XboxManagerClass xboxManagerClass = new XboxManagerClass();
+				XboxManagerClass xboxManagerClass = new();
 				IXboxConsole xboxConsole = xboxManagerClass.OpenConsole(name);
 				uint ipaddress = xboxConsole.IPAddress;
 				this.consoleNames.Add(name);
@@ -127,7 +126,7 @@ namespace xbWatson
 		private void RemoveMachine(string name)
 		{
 			int num = this.consoleNames.IndexOf(name);
-			if (num == -1)
+			if (num is -1)
 			{
 				string text = " ";
 				char[] separator = text.ToCharArray();
@@ -163,17 +162,17 @@ namespace xbWatson
 
 		private void buttonRemove_Click(object sender, EventArgs e)
 		{
-			if (this.checkedListBoxMachines.SelectedItem == null)
+			if (this.checkedListBoxMachines.SelectedItem is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("ConsoleSelectRequest"));
 				return;
 			}
-			this.RemoveMachine((string)this.checkedListBoxMachines.SelectedItem);
+			this.RemoveMachine(this.checkedListBoxMachines.SelectedItem.ToString());
 		}
 
 		private void buttonOK_Click(object sender, EventArgs e)
 		{
-			if (this.xbWatsonRegKey != null)
+			if (this.xbWatsonRegKey is not null)
 			{
 				this.xbWatsonRegKey.Close();
 				try
@@ -185,21 +184,21 @@ namespace xbWatson
 				}
 			}
 			this.xbWatsonRegKey = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Consoles");
-			if (this.xbWatsonRegKey == null)
+			if (this.xbWatsonRegKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("ChangesSaveError"));
 				return;
 			}
 			for (int i = 0; i < this.consoleNames.Count; i++)
 			{
-				this.xbWatsonRegKey.SetValue((string)this.consoleNames[i], this.IsConsoleSelected[i] ? "True" : "False");
+				this.xbWatsonRegKey.SetValue((string)this.consoleNames[i], this.IsConsoleSelected[i]);
 			}
 			base.Close();
 		}
 
 		private void buttonCancel_Click(object sender, EventArgs e)
 		{
-			if (this.xbWatsonRegKey != null)
+			if (this.xbWatsonRegKey is not null)
 			{
 				this.xbWatsonRegKey.Close();
 			}
@@ -210,7 +209,7 @@ namespace xbWatson
 		{
 			int index = e.Index;
 			int num = this.consoleNames.IndexOf(this.checkedListBoxMachines.Items[index].ToString());
-			if (num != -1)
+			if (num is not -1)
 			{
 				this.IsConsoleSelected[num] = (e.NewValue == CheckState.Checked);
 				return;
@@ -220,13 +219,8 @@ namespace xbWatson
 		}
 
 		private RegistryKey xbWatsonRegKey;
-
 		private RegistryKey XenonShellExtensionRegKey;
-
-		private List<string> consoleNames;
-
-		private List<bool> IsConsoleSelected;
-
-		private List<string> DisabledConsoles;
+		private readonly List<string> consoleNames;
+		private readonly List<bool> IsConsoleSelected;
 	}
 }

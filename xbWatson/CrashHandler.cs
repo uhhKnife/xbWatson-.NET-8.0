@@ -18,7 +18,7 @@ namespace xbWatson
 		public override void HandleEvent(IXboxEventInfo eventInformation)
 		{
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-			if (registryKey != null)
+			if (registryKey is not null)
 			{
 				string text = (string)registryKey.GetValue(this.ActionValueName);
 				string text2 = (string)registryKey.GetValue("AfterDump");

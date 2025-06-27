@@ -14,6 +14,7 @@ namespace xbWatson
 		}
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsoleConnectionManagerDialog));
             label1 = new System.Windows.Forms.Label();
             textBoxConsoleName = new System.Windows.Forms.TextBox();

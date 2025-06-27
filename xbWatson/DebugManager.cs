@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using XDevkit;
+using System.Threading.Tasks;
 
 namespace xbWatson
 {
@@ -61,15 +62,9 @@ namespace xbWatson
 			}
 		}
 
-		private void xboxConsole_OnStdNotify(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
+		private async void xboxConsole_OnStdNotify(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
 		{
-			XboxEvents_OnStdNotifyEventHandler method = new XboxEvents_OnStdNotifyEventHandler(this.HandleEvent);
-			IAsyncResult asyncResult = this.xboxWatson.BeginInvoke(method, new object[]
-			{
-				eventCode,
-				eventInformation
-			});
-			asyncResult.AsyncWaitHandle.WaitOne();
+			await Task.Run(() => this.HandleEvent(eventCode, eventInformation));
 		}
 
 		internal void HandleEvent(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
@@ -185,7 +180,7 @@ namespace xbWatson
 				num = Marshal.ReleaseComObject(eventInformation);
 			}
 			while (num > 0);
-			if (info.Module != null)
+			if (info.Module is not null)
 			{
 				int num2;
 				do
@@ -194,7 +189,7 @@ namespace xbWatson
 				}
 				while (num2 > 0);
 			}
-			if (info.Section != null)
+			if (info.Section is not null)
 			{
 				int num3;
 				do
@@ -203,7 +198,7 @@ namespace xbWatson
 				}
 				while (num3 > 0);
 			}
-			if (info.Thread != null)
+			if (info.Thread is not null)
 			{
 				int num4;
 				do

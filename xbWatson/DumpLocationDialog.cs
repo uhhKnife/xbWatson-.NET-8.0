@@ -14,7 +14,7 @@ namespace xbWatson
 			this.resources = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
 			this.InitializeComponent();
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
@@ -31,7 +31,7 @@ namespace xbWatson
 				return;
 			}
 			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true);
-			if (registryKey == null)
+			if (registryKey is null)
 			{
 				MessageBox.Show(this, this.resources.GetString("RegistryAccessError"));
 				return;
