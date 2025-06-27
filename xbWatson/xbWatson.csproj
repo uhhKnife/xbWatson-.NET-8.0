@@ -13,7 +13,7 @@
     <EnableDefaultEmbeddedResourceItems>true</EnableDefaultEmbeddedResourceItems>
     <AssemblyTitle>xbWatson</AssemblyTitle>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Company>YourCompany</Company>
+    <Company>Microsoft</Company>
     <Product>xbWatson</Product>
     <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
@@ -27,6 +27,11 @@
 
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="GenerateGitVersion.ps1" />
   </ItemGroup>
+
+  <Target Name="GenerateGitVersion" BeforeTargets="BeforeBuild">
+    <Exec Command="powershell -NoProfile -ExecutionPolicy Bypass -File &quot;$(ProjectDir)GenerateGitVersion.ps1&quot;" />
+  </Target>
 
 </Project>

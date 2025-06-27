@@ -13,12 +13,22 @@ namespace xbWatson
 		{
 			this.InitializeComponent();
 			FileVersionInfo versionInfo = FileVersionInfo.GetVersionInfo(base.GetType().Assembly.Location);
-			ResourceManager resourceManager = new(typeof(xbWatsonUI));
 			ResourceManager resourceManager2 = new("xbWatson.Strings", base.GetType().Assembly);
-			this.label1.Text = resourceManager2.GetString("Version") + versionInfo.FileVersion + "\n" + versionInfo.LegalCopyright;
+
+			string buildType = System.Diagnostics.Debugger.IsAttached ? "Debug" : "Release";
+#if DEBUG
+			buildType = "Debug";
+#else
+			buildType = "Release";
+#endif
+			string monthYear = DateTime.Now.ToString("MMM yyyy");
+			string commitHash = GitVersion.Commit;
+
+			this.label1.Text =
+				"Microsoft (R) xbWatson\n" +
+				$"{monthYear} {buildType} - {commitHash}\n" +
+				"Copyright (C) Microsoft Corp.";
 			base.ShowDialog(xboxWatson);
-			resourceManager.ReleaseAllResources();
-			resourceManager2.ReleaseAllResources();
 		}
 
 		private void OK_Click(object sender, EventArgs e)

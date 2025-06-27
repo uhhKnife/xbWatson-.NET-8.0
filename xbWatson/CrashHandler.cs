@@ -94,7 +94,7 @@ namespace xbWatson
 		private void Continue(IXboxEventInfo eventInformation)
 		{
 			eventInformation.Info.Thread.Continue(true);
-            console.DebugTarget.Go(out bool flag);
+            console.DebugTarget.Go(out _);
         }
 	}
 }
