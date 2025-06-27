@@ -6,6 +6,7 @@ using System.IO;
 using System.Resources;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using System.Collections.Generic;
 
 namespace xbWatson
 {
@@ -14,8 +15,8 @@ namespace xbWatson
 		public xbWatsonUI()
 		{
 			this.resources = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
-			this.ConnectedConsolesList = new ArrayList();
-			this.xbWatsonList = new ArrayList();
+			this.ConnectedConsolesList = new List<string>();
+			this.xbWatsonList = new List<xbWatson>();
 			this.InitializeComponent();
 			base.Show();
 			this.InitializeOptions();
@@ -238,7 +239,7 @@ namespace xbWatson
 		{
 			for (int i = 0; i < this.xbWatsonList.Count; i++)
 			{
-				xbWatson xb = (xbWatson)this.xbWatsonList[i];
+				xbWatson xb = this.xbWatsonList[i];
 				this.StopConsole(xb);
 			}
 			this.xbWatsonList.Clear();
@@ -270,7 +271,7 @@ namespace xbWatson
 		{
 			for (int i = 0; i < this.xbWatsonList.Count; i++)
 			{
-				xbWatson xbWatson = (xbWatson)this.xbWatsonList[i];
+				xbWatson xbWatson = this.xbWatsonList[i];
 				if (xbWatson.ConsoleName.Equals(name))
 				{
 					return xbWatson;
@@ -804,8 +805,7 @@ namespace xbWatson
 			// TODO: Implement cascade logic
 		}
 
-		private ArrayList xbWatsonList;
-
-		private ArrayList ConnectedConsolesList;
+		private List<xbWatson> xbWatsonList;
+		private List<string> ConnectedConsolesList;
 	}
 }

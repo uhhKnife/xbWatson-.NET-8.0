@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using XDevkit;
+using System.Collections.Generic;
 
 namespace xbWatson
 {
@@ -16,9 +17,9 @@ namespace xbWatson
 		{
 			this.resources = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
 			this.InitializeComponent();
-			this.consoleNames = new ArrayList();
-			this.IsConsoleSelected = new ArrayList();
-			this.DisabledConsoles = new ArrayList();
+			this.consoleNames = new List<string>();
+			this.IsConsoleSelected = new List<bool>();
+			this.DisabledConsoles = new List<string>();
 			this.InitializeConsoleList();
 		}
 
@@ -222,10 +223,10 @@ namespace xbWatson
 
 		private RegistryKey XenonShellExtensionRegKey;
 
-		private ArrayList consoleNames;
+		private List<string> consoleNames;
 
-		private ArrayList IsConsoleSelected;
+		private List<bool> IsConsoleSelected;
 
-		private ArrayList DisabledConsoles;
+		private List<string> DisabledConsoles;
 	}
 }
