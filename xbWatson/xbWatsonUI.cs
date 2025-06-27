@@ -14,142 +14,84 @@ namespace xbWatson
 	{
 		public xbWatsonUI()
 		{
-			this.resources = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
-			this.ConnectedConsolesList = new List<string>();
-			this.xbWatsonList = new List<xbWatson>();
-			this.InitializeComponent();
-			base.Show();
-			this.InitializeOptions();
-			this.CheckForConsoles();
-			base.Show();
-			if (this.menuConfigureConnectOnStart.Checked)
+			resources = new ResourceManager("xbWatson.Strings", GetType().Assembly);
+			ConnectedConsolesList = [];
+			xbWatsonList = [];
+			InitializeComponent();
+			Show();
+			InitializeOptions();
+			CheckForConsoles();
+			Show();
+			if (menuConfigureConnectOnStart.Checked)
 			{
-				this.Start();
+				Start();
 			}
 		}
 
 		private void InitializeOptions()
 		{
-			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
+			using var registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options", true) ??
+				Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
 			if (registryKey is null)
 			{
-				registryKey = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
-				if (registryKey is null)
-				{
-					MessageBox.Show(this, this.resources.GetString("RegistrCreationError"));
-					return;
-				}
+				MessageBox.Show(this, resources.GetString("RegistrCreationError") ?? "Registry creation error");
+				return;
+			}
+			if (registryKey.GetValue("OnAssert") is null)
+			{
 				registryKey.SetValue("OnAssert", "Prompt");
 				registryKey.SetValue("OnRIP", "Prompt");
 				registryKey.SetValue("OnException", "Prompt");
 				registryKey.SetValue("AfterDump", "Restart");
 				registryKey.SetValue("Format", "FullHeap");
 				registryKey.SetValue("ConnectOnStart", "True");
-				string text = Environment.GetEnvironmentVariable("XEDK");
-				text += "\\Dumps";
+				var text = Environment.GetEnvironmentVariable("XEDK") + "\\Dumps";
 				registryKey.SetValue("Path", text);
 				Directory.CreateDirectory(text);
-				registryKey.Close();
-				this.menuConfigureOnAssertPrompt.Checked = true;
-				this.menuConfigureOnAssertBreak.Checked = false;
-				this.menuConfigureOnAssertContinue.Checked = false;
-				this.menuConfigureOnAssertRestart.Checked = false;
-				this.menuConfigureOnRIPPrompt.Checked = true;
-				this.menuConfigureOnRIPDump.Checked = false;
-				this.menuConfigureOnRIPContinue.Checked = false;
-				this.menuConfigureOnRIPRestart.Checked = false;
-				this.menuConfigureOnExceptionPrompt.Checked = true;
-				this.menuConfigureOnExceptionDump.Checked = false;
-				this.menuConfigureOnExceptionContinue.Checked = false;
-				this.menuConfigureOnExceptionRestart.Checked = false;
-				this.menuConfigureAfterDumpRestart.Checked = true;
-				this.menuConfigureAfterDumpContinue.Checked = false;
-				this.menuConfigureDumpFormatFullHeap.Checked = true;
-				this.menuConfigureDumpFormatMini.Checked = false;
-				this.menuConfigureConnectOnStart.Checked = true;
+				menuConfigureOnAssertPrompt.Checked = true;
+				menuConfigureOnAssertBreak.Checked = false;
+				menuConfigureOnAssertContinue.Checked = false;
+				menuConfigureOnAssertRestart.Checked = false;
+				menuConfigureOnRIPPrompt.Checked = true;
+				menuConfigureOnRIPDump.Checked = false;
+				menuConfigureOnRIPContinue.Checked = false;
+				menuConfigureOnRIPRestart.Checked = false;
+				menuConfigureOnExceptionPrompt.Checked = true;
+				menuConfigureOnExceptionDump.Checked = false;
+				menuConfigureOnExceptionContinue.Checked = false;
+				menuConfigureOnExceptionRestart.Checked = false;
+				menuConfigureAfterDumpRestart.Checked = true;
+				menuConfigureAfterDumpContinue.Checked = false;
+				menuConfigureDumpFormatFullHeap.Checked = true;
+				menuConfigureDumpFormatMini.Checked = false;
+				menuConfigureConnectOnStart.Checked = true;
 			}
 			else
 			{
-				string text2 = (string)registryKey.GetValue("OnAssert");
-				if (text2.Equals("Break"))
-				{
-					this.menuConfigureOnAssertBreak.Checked = true;
-				}
-				if (text2.Equals("Continue"))
-				{
-					this.menuConfigureOnAssertContinue.Checked = true;
-				}
-				if (text2.Equals("Restart"))
-				{
-					this.menuConfigureOnAssertRestart.Checked = true;
-				}
-				if (text2.Equals("Prompt"))
-				{
-					this.menuConfigureOnAssertPrompt.Checked = true;
-				}
-				text2 = (string)registryKey.GetValue("OnRIP");
-				if (text2.Equals("Dump"))
-				{
-					this.menuConfigureOnRIPDump.Checked = true;
-				}
-				if (text2.Equals("Continue"))
-				{
-					this.menuConfigureOnRIPContinue.Checked = true;
-				}
-				if (text2.Equals("Restart"))
-				{
-					this.menuConfigureOnRIPRestart.Checked = true;
-				}
-				if (text2.Equals("Prompt"))
-				{
-					this.menuConfigureOnRIPPrompt.Checked = true;
-				}
-				text2 = (string)registryKey.GetValue("OnException");
-				if (text2.Equals("Dump"))
-				{
-					this.menuConfigureOnExceptionDump.Checked = true;
-				}
-				if (text2.Equals("Continue"))
-				{
-					this.menuConfigureOnExceptionContinue.Checked = true;
-				}
-				if (text2.Equals("Restart"))
-				{
-					this.menuConfigureOnExceptionRestart.Checked = true;
-				}
-				if (text2.Equals("Prompt"))
-				{
-					this.menuConfigureOnExceptionPrompt.Checked = true;
-				}
-				text2 = (string)registryKey.GetValue("AfterDump");
-				if (text2.Equals("Continue"))
-				{
-					this.menuConfigureAfterDumpContinue.Checked = true;
-				}
-				if (text2.Equals("Restart"))
-				{
-					this.menuConfigureAfterDumpRestart.Checked = true;
-				}
-				text2 = (string)registryKey.GetValue("Format");
-				if (text2.Equals("Mini"))
-				{
-					this.menuConfigureDumpFormatMini.Checked = true;
-				}
-				if (text2.Equals("FullHeap"))
-				{
-					this.menuConfigureDumpFormatFullHeap.Checked = true;
-				}
-				text2 = (string)registryKey.GetValue("ConnectOnStart");
-				if (text2.Equals("True"))
-				{
-					this.menuConfigureConnectOnStart.Checked = true;
-				}
-				else
-				{
-					this.menuConfigureConnectOnStart.Checked = false;
-				}
+				var text2 = registryKey.GetValue("OnAssert") as string;
+				if (text2 == "Break") menuConfigureOnAssertBreak.Checked = true;
+				if (text2 == "Continue") menuConfigureOnAssertContinue.Checked = true;
+				if (text2 == "Restart") menuConfigureOnAssertRestart.Checked = true;
+				if (text2 == "Prompt") menuConfigureOnAssertPrompt.Checked = true;
+				text2 = registryKey.GetValue("OnRIP") as string;
+				if (text2 == "Dump") menuConfigureOnRIPDump.Checked = true;
+				if (text2 == "Continue") menuConfigureOnRIPContinue.Checked = true;
+				if (text2 == "Restart") menuConfigureOnRIPRestart.Checked = true;
+				if (text2 == "Prompt") menuConfigureOnRIPPrompt.Checked = true;
+				text2 = registryKey.GetValue("OnException") as string;
+				if (text2 == "Dump") menuConfigureOnExceptionDump.Checked = true;
+				if (text2 == "Continue") menuConfigureOnExceptionContinue.Checked = true;
+				if (text2 == "Restart") menuConfigureOnExceptionRestart.Checked = true;
+				if (text2 == "Prompt") menuConfigureOnExceptionPrompt.Checked = true;
+				text2 = registryKey.GetValue("AfterDump") as string;
+				if (text2 == "Continue") menuConfigureAfterDumpContinue.Checked = true;
+				if (text2 == "Restart") menuConfigureAfterDumpRestart.Checked = true;
+				text2 = registryKey.GetValue("Format") as string;
+				if (text2 == "Mini") menuConfigureDumpFormatMini.Checked = true;
+				if (text2 == "FullHeap") menuConfigureDumpFormatFullHeap.Checked = true;
+				text2 = registryKey.GetValue("ConnectOnStart") as string;
+				menuConfigureConnectOnStart.Checked = text2 == "True";
 			}
-			registryKey.Close();
 		}
 
 		private void CheckForConsoles()
@@ -158,8 +100,7 @@ namespace xbWatson
 			if (registryKey is null)
 			{
 				this.Cursor = Cursors.WaitCursor;
-				ConsoleConnectionManagerDialog consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog();
-				consoleConnectionManagerDialog.Visible = false;
+				var consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog { Visible = false };
 				this.Cursor = Cursors.Default;
 				consoleConnectionManagerDialog.ShowDialog();
 				return;
@@ -193,10 +134,10 @@ namespace xbWatson
 					}
 				}
 			}
-			string[] array = this.ConnectedConsolesList.ToArray();
+			string[] array = [.. this.ConnectedConsolesList];
 			for (int j = 0; j < array.Length; j++)
 			{
-				if (!this.ListContains(valueNames, array[j]))
+				if (!ListContains(valueNames, array[j]))
 				{
 					xbWatson xbWatson2 = this.GetxbWatsonFromName(array[j]);
 					if (xbWatson2 is not null)
@@ -221,7 +162,7 @@ namespace xbWatson
 
 		private void StartConsole(string name)
 		{
-			xbWatson xbWatson = new xbWatson(this, name);
+			xbWatson xbWatson = new(this, name);
 			if (xbWatson is null)
 			{
 				string text = this.resources.GetString("ConsoleConnectionError") + name;
@@ -253,13 +194,13 @@ namespace xbWatson
 			xb.DisableClosingEventHandler();
 			xb.Disconnect();
 			xb.Close();
-		}
+        }
 
-		private bool ListContains(string[] list, string name)
+        private static bool ListContains(string[] list, string name)
 		{
-			for (int i = 0; i < list.Length; i++)
+			foreach (var item in list)
 			{
-				if (list[i].Equals(name))
+				if (item.Equals(name))
 				{
 					return true;
 				}
@@ -313,8 +254,7 @@ namespace xbWatson
 			if (this.ConnectedConsolesList.Count == 0)
 			{
 				this.Cursor = Cursors.WaitCursor;
-				ConsoleConnectionManagerDialog consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog();
-				consoleConnectionManagerDialog.Visible = false;
+				var consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog { Visible = false };
 				this.Cursor = Cursors.Default;
 				DialogResult dialogResult = consoleConnectionManagerDialog.ShowDialog();
 				if (dialogResult == DialogResult.OK)
@@ -330,12 +270,13 @@ namespace xbWatson
 
 		private void xbWatsonUI_Click(object sender, EventArgs e)
 		{
-			ToolStripMenuItem menuItem = (ToolStripMenuItem)sender;
 		}
 
 		private void menuHelpAbout_Click(object sender, EventArgs e)
 		{
-			new AboutDialog(this);
+			using var aboutDialog = new AboutDialog(this);
+			// ShowDialog is not needed if AboutDialog shows itself in the constructor, otherwise:
+			// aboutDialog.ShowDialog();
 		}
 
 		private void menuFileExit_Click(object sender, EventArgs e)
@@ -346,8 +287,7 @@ namespace xbWatson
 		private void menuActionsSelectConsoles_Click(object sender, EventArgs e)
 		{
 			this.Cursor = Cursors.WaitCursor;
-			ConsoleConnectionManagerDialog consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog();
-			consoleConnectionManagerDialog.Visible = false;
+			var consoleConnectionManagerDialog = new ConsoleConnectionManagerDialog { Visible = false };
 			this.Cursor = Cursors.Default;
 			DialogResult dialogResult = consoleConnectionManagerDialog.ShowDialog(this);
 			if (dialogResult == DialogResult.OK)
@@ -692,7 +632,7 @@ namespace xbWatson
 			base.LayoutMdi(MdiLayout.TileVertical);
 		}
 
-		private void menuItem1_Click(object sender, EventArgs e)
+		private void menuWindowsTileHorizontally_Click(object sender, EventArgs e)
 		{
 			base.LayoutMdi(MdiLayout.TileHorizontal);
 		}
@@ -729,8 +669,7 @@ namespace xbWatson
 
 		private void menuFileSaveAs_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.SaveLog();
 			}
@@ -738,8 +677,7 @@ namespace xbWatson
 
 		private void menuEditCopySelection_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.logCopy();
 			}
@@ -747,8 +685,7 @@ namespace xbWatson
 
 		private void menuEditCopyContents_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.logCopy();
 			}
@@ -756,8 +693,7 @@ namespace xbWatson
 
 		private void menuEditClearWindow_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.logClear();
 			}
@@ -765,8 +701,7 @@ namespace xbWatson
 
 		private void menuEditSelectAll_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.logSelectAll();
 			}
@@ -774,8 +709,7 @@ namespace xbWatson
 
 		private void menuEditLimitBufferLength_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.LimitBufferLength();
 			}
@@ -783,8 +717,7 @@ namespace xbWatson
 
 		private void menuAddTimestamps_Click(object sender, EventArgs e)
 		{
-			xbWatson xbWatson = (xbWatson)base.ActiveMdiChild;
-			if (xbWatson is not null)
+			if (base.ActiveMdiChild is xbWatson xbWatson)
 			{
 				xbWatson.AddTimestamps();
 			}
@@ -795,17 +728,13 @@ namespace xbWatson
 			this.UpdateChecks();
 		}
 
-		private void menuWindowsTileHorizontally_Click(object sender, EventArgs e)
-		{
-			// TODO: Implement tile horizontally logic
-		}
-
 		private void menuWindowsCascade_Click(object sender, EventArgs e)
 		{
-			// TODO: Implement cascade logic
+			base.LayoutMdi(MdiLayout.Cascade);
 		}
 
-		private List<xbWatson> xbWatsonList;
-		private List<string> ConnectedConsolesList;
+		private readonly List<xbWatson> xbWatsonList;
+		private readonly List<string> ConnectedConsolesList;
+		private readonly ResourceManager resources;
 	}
 }

@@ -104,6 +104,5 @@ namespace xbWatson
 		private global::System.Windows.Forms.Button buttonRemove;
 		private global::System.Windows.Forms.CheckedListBox checkedListBoxMachines;
 		private global::System.Windows.Forms.TextBox textBoxConsoleName;
-        private global::System.Resources.ResourceManager resources;
 	}
 }

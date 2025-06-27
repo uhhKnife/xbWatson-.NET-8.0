@@ -8,91 +8,70 @@ namespace xbWatson
 {
 	internal class AssertHandler : BreakHandler
 	{
-		public AssertHandler(XboxConsole console, xbWatson watson) : base(console, watson)
-		{
-		}
+		public AssertHandler(XboxConsole console, xbWatson watson) : base(console, watson) { }
 
-		protected override string GetDialogTitle()
-		{
-			return "Xbox Assertion Failed - " + this.console.RunningProcessInfo.ProgramName;
-		}
+		protected override string GetDialogTitle() => $"Xbox Assertion Failed - {console.RunningProcessInfo.ProgramName}";
 
-		protected override string GetDialogMessage(IXboxEventInfo information)
-		{
-			return information.Info.Message;
-		}
+		protected override string GetDialogMessage(IXboxEventInfo information) => information.Info.Message;
 
 		public override void HandleEvent(IXboxEventInfo eventInformation)
 		{
-			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
+			using var registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
 			if (registryKey is not null)
 			{
-				string text = (string)registryKey.GetValue("OnAssert");
-				registryKey.Close();
-				if (text.Equals("Break"))
+				var text = registryKey.GetValue("OnAssert") as string;
+				if (text is not null && text.Equals("Break"))
 				{
-					this.watson.Log("*****************************************\n");
-					this.watson.Log("xbWatson: Configured action on Assert - Break.\nExecution stopped\n");
-					this.watson.Log("*****************************************\n");
+					watson.Log("*****************************************\n");
+					watson.Log("xbWatson: Configured action on Assert - Break.\nExecution stopped\n");
+					watson.Log("*****************************************\n");
 					try
 					{
-						IXboxStackFrame topOfStack = eventInformation.Info.Thread.TopOfStack;
+						var topOfStack = eventInformation.Info.Thread.TopOfStack;
 						topOfStack.SetRegister64((XboxRegisters64)4, 98L);
 						topOfStack.FlushRegisterChanges();
 						eventInformation.Info.Thread.Continue(true);
-						bool flag;
-						this.console.DebugTarget.Go(out flag);
-						int num;
-						do
-						{
-							num = Marshal.ReleaseComObject(topOfStack);
-						}
-						while (num > 0);
+						console.DebugTarget.Go(out _);
+						while (Marshal.ReleaseComObject(topOfStack) > 0) { }
 					}
 					catch (Exception ex)
 					{
-						this.watson.Log(ex.Message);
+						watson.Log(ex.Message);
 					}
 					return;
 				}
-				if (text.Equals("Continue"))
+				if (text is not null && text.Equals("Continue"))
 				{
-					this.watson.Log("*****************************************\n");
-					this.watson.Log("xbWatson: Configured action on Assert - Continue.\nExecution continued\n");
-					this.watson.Log("*****************************************\n");
+					watson.Log("*****************************************\n");
+					watson.Log("xbWatson: Configured action on Assert - Continue.\nExecution continued\n");
+					watson.Log("*****************************************\n");
 					try
 					{
-						IXboxStackFrame topOfStack2 = eventInformation.Info.Thread.TopOfStack;
+						var topOfStack2 = eventInformation.Info.Thread.TopOfStack;
 						topOfStack2.SetRegister64((XboxRegisters64)4, 105L);
 						topOfStack2.FlushRegisterChanges();
 						eventInformation.Info.Thread.Continue(true);
-						bool flag2;
-						this.console.DebugTarget.Go(out flag2);
-						int num2;
-						do
-						{
-							num2 = Marshal.ReleaseComObject(topOfStack2);
-						}
-						while (num2 > 0);
+						console.DebugTarget.Go(out _);
+						while (Marshal.ReleaseComObject(topOfStack2) > 0) { }
 					}
 					catch (Exception ex2)
 					{
-						this.watson.Log(ex2.Message);
+						watson.Log(ex2.Message);
 					}
 					return;
 				}
-				if (text.Equals("Restart"))
+				if (text is not null && text.Equals("Restart"))
 				{
-					this.watson.Log("*****************************************\n");
-					this.watson.Log("xbWatson: Configured action on Assert - Restart.\nConsole rebooting\n");
-					this.watson.Log("*****************************************\n");
+					watson.Log("*****************************************\n");
+					watson.Log("xbWatson: Configured action on Assert - Restart.\nConsole rebooting\n");
+					watson.Log("*****************************************\n");
 					try
 					{
 						this.Reboot();
 					}
 					catch (Exception ex3)
 					{
-						this.watson.Log(ex3.Message);
+						watson.Log(ex3.Message);
 					}
 					return;
 				}
@@ -100,7 +79,7 @@ namespace xbWatson
 			DialogResult dialogResult = base.ShowDialog(eventInformation, Strings.SaveCrashDumpButtonText);
 			try
 			{
-				IXboxStackFrame topOfStack3 = eventInformation.Info.Thread.TopOfStack;
+				var topOfStack3 = eventInformation.Info.Thread.TopOfStack;
 				switch (dialogResult)
 				{
 				case DialogResult.Cancel:

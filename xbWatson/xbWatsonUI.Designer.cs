@@ -389,7 +389,6 @@ namespace xbWatson
 		private global::System.Windows.Forms.ToolStripMenuItem  menuConfigureAfterDumpRestart;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuWindowsTileHorizontally;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuWindowsCascade;
-		private global::System.Resources.ResourceManager resources;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuConfigureConnectOnStart;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuEdit;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuEditClearWindow;

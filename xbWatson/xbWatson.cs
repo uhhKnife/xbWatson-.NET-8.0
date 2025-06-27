@@ -13,89 +13,83 @@ namespace xbWatson
 	{
 		public xbWatson(xbWatsonUI parentWindow, string xboxName)
 		{
-			this.MainWindow = parentWindow;
-			this.ConsoleName = xboxName;
-			this.fLimitBufferLength = false;
-			this.fTimestamp = false;
-			this.InitializeComponent();
-			this.ClosingEventHandler = new CancelEventHandler(this.xbWatson_Closing);
-			base.Closing += this.ClosingEventHandler;
-			base.Visible = true;
-			this.Text = this.Text + " " + xboxName;
+			MainWindow = parentWindow;
+			ConsoleName = xboxName;
+			fLimitBufferLength = false;
+			fTimestamp = false;
+			InitializeComponent();
+			ClosingEventHandler = xbWatson_Closing;
+			Closing += ClosingEventHandler;
+			Visible = true;
+			Text += $" {xboxName}";
 		}
 
 		public string ConsoleName
 		{
 			get
 			{
-				return this.consoleName;
+				return consoleName;
 			}
 			set
 			{
-				this.consoleName = value;
+				consoleName = value;
 			}
 		}
 
 		public void DisableClosingEventHandler()
 		{
-			base.Closing -= this.ClosingEventHandler;
+			Closing -= ClosingEventHandler;
 		}
 
 		public void EnableClosingEventHandler()
 		{
-			base.Closing += this.ClosingEventHandler;
+			Closing += ClosingEventHandler;
 		}
 
 		public bool Connect(string xboxName)
 		{
 			try
 			{
-				this.xboxDebugManager = new DebugManager(this, xboxName);
-				this.xboxDebugManager.InitDM();
+				xboxDebugManager = new DebugManager(this, xboxName);
+				xboxDebugManager.InitDM();
 				return true;
 			}
 			catch (Exception arg)
 			{
-				this.Log("Could not connect to Xbox\n " + arg);
+				Log($"Could not connect to Xbox\n {arg}");
 			}
 			return false;
 		}
-
-		private bool isDisconnecting = false;
 
 		public void Disconnect()
 		{
 			if (isDisconnecting) return;
 			isDisconnecting = true;
-			this.xboxDebugManager.UnInitDM();
+			xboxDebugManager?.UnInitDM();
 		}
 
 		public void Log(string logText)
 		{
 			if (logText is null)
-			{
 				return;
-			}
-			if (this.fLimitBufferLength)
+			if (fLimitBufferLength)
+				LimitBufferLength();
+			if (fTimestamp)
 			{
-				this.LimitBufferLength();
+				var now = DateTime.Now;
+				LogAppendText($"{now.ToLongDateString()}\t{now.ToLongTimeString()}\t");
 			}
-			if (this.fTimestamp)
-			{
-				DateTime now = DateTime.Now;
-				this.LogAppendText(now.ToLongDateString() + "\t" + now.ToLongTimeString() + "\t");
-			}
-			this.LogAppendText(logText);
+			LogAppendText(logText);
 		}
 
 		public bool IsLimitBufferLengthChecked()
 		{
-			return this.fLimitBufferLength;
+			return fLimitBufferLength;
 		}
 
 		public bool IsAddTimestampsChecked()
 		{
-			return this.fTimestamp;
+			return fTimestamp;
 		}
 
 		public bool DumpLog(IWin32Window owner, IXboxConsole xboxConsole)
@@ -123,133 +117,119 @@ namespace xbWatson
 
 		public bool DumpLog(IXboxConsole xboxConsole)
 		{
-			RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
+			using var registryKey = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\XenonSDK\\xbWatson\\Options");
 			if (registryKey is null)
 			{
-				this.Log("Cannot open registry for Dump location");
+				Log("Cannot open registry for Dump location");
 				return false;
 			}
-			string text = (string)registryKey.GetValue("Path");
-			string text2 = (string)registryKey.GetValue("Format");
-			Directory.CreateDirectory(text + "\\" + xboxConsole.Name);
-			DateTime now = DateTime.Now;
-			object obj = text;
-			text = string.Concat(new object[]
-			{
-				obj,
-				"\\",
-				xboxConsole.Name,
-				"\\Dump",
-				now.Ticks,
-				".dmp"
-			});
-			if (text2.Equals("Mini"))
-			{
-				xboxConsole.DebugTarget.WriteDump(text, (XboxDumpFlags)0);
-			}
+			var path = registryKey.GetValue("Path") as string;
+			var format = registryKey.GetValue("Format") as string;
+			Directory.CreateDirectory($"{path}\\{xboxConsole.Name}");
+			var now = DateTime.Now;
+			var dumpPath = $"{path}\\{xboxConsole.Name}\\Dump{now.Ticks}.dmp";
+			if (format == "Mini")
+				xboxConsole.DebugTarget.WriteDump(dumpPath, (XboxDumpFlags)0);
 			else
-			{
-				xboxConsole.DebugTarget.WriteDump(text, (XboxDumpFlags)2);
-			}
-			this.Log("Dump saved as " + text + "\n");
-			this.Log("*****************************************\n");
-			registryKey.Close();
+				xboxConsole.DebugTarget.WriteDump(dumpPath, (XboxDumpFlags)2);
+			Log($"Dump saved as {dumpPath}\n");
+			Log("*****************************************\n");
 			return true;
 		}
 
 		public void SaveLog()
 		{
-			this.SaveLogFile = new SaveFileDialog();
-			this.SaveLogFile.DefaultExt = "txt";
-			this.SaveLogFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-			this.SaveLogFile.FilterIndex = 1;
-			this.SaveLogFile.OverwritePrompt = true;
-			if (this.SaveLogFile.ShowDialog(this) == DialogResult.OK && this.SaveLogFile.FileName.Length > 0)
+			SaveLogFile = new SaveFileDialog();
+			SaveLogFile.DefaultExt = "txt";
+			SaveLogFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+			SaveLogFile.FilterIndex = 1;
+			SaveLogFile.OverwritePrompt = true;
+			if (SaveLogFile.ShowDialog(this) == DialogResult.OK && SaveLogFile.FileName.Length > 0)
 			{
-				this.log.SaveFile(this.SaveLogFile.FileName, RichTextBoxStreamType.PlainText);
+				log.SaveFile(SaveLogFile.FileName, RichTextBoxStreamType.PlainText);
 			}
 		}
 
 		public void logCopy()
 		{
-			this.log.Copy();
+			log.Copy();
 		}
 
 		public void logClear()
 		{
-			this.log.Clear();
+			log.Clear();
 		}
 
 		public void logSelectAll()
 		{
-			this.log.SelectAll();
+			log.SelectAll();
 		}
 
 		public void LimitBufferLength()
 		{
-			this.fLimitBufferLength = !this.fLimitBufferLength;
-			this.contextMenuLimitBufferLength.Checked = this.fLimitBufferLength;
+			fLimitBufferLength = !fLimitBufferLength;
+			contextMenuLimitBufferLength.Checked = fLimitBufferLength;
 		}
 
 		public void AddTimestamps()
 		{
-			this.fTimestamp = !this.fTimestamp;
-			this.contextMenuAddTimestamps.Checked = this.fTimestamp;
+			fTimestamp = !fTimestamp;
+			contextMenuAddTimestamps.Checked = fTimestamp;
 		}
 
 		private void contextMenuCopySelection_Click(object sender, EventArgs e)
 		{
-			this.log.Copy();
+			log.Copy();
 		}
 
 		private void contextMenuCopyContents_Click(object sender, EventArgs e)
 		{
-			this.log.Copy();
+			log.Copy();
 		}
 
 		private void contextMenuClearWindow_Click(object sender, EventArgs e)
 		{
-			this.log.Clear();
+			log.Clear();
 		}
 
 		private void contextMenuSelectAll_Click(object sender, EventArgs e)
 		{
-			this.log.SelectAll();
+			log.SelectAll();
 		}
 
 		private void contextMenuSaveContents_Click(object sender, EventArgs e)
 		{
-			this.SaveLog();
+			SaveLog();
 		}
 
 		private void contextMenuLimitBufferLength_Click(object sender, EventArgs e)
 		{
-			this.fLimitBufferLength = !this.fLimitBufferLength;
-			this.contextMenuLimitBufferLength.Checked = this.fLimitBufferLength;
+			fLimitBufferLength = !fLimitBufferLength;
+			contextMenuLimitBufferLength.Checked = fLimitBufferLength;
 		}
 
 		private void contextMenuAddTimestamps_Click(object sender, EventArgs e)
 		{
-			this.fTimestamp = !this.fTimestamp;
-			this.contextMenuAddTimestamps.Checked = this.fTimestamp;
+			fTimestamp = !fTimestamp;
+			contextMenuAddTimestamps.Checked = fTimestamp;
 		}
 
 		private void xbWatson_Closing(object sender, CancelEventArgs e)
 		{
 			if (isDisconnecting) return;
-			ResourceManager resourceManager = new ResourceManager("xbWatson.Strings", base.GetType().Assembly);
-			string text = resourceManager.GetString("DisconnectConfirmation") + this.ConsoleName + "?";
-			switch (MessageBox.Show(this, text, base.Name, MessageBoxButtons.OKCancel))
+			var resourceManager = new ResourceManager("xbWatson.Strings", GetType().Assembly);
+			var text = resourceManager.GetString("DisconnectConfirmation") + ConsoleName + "?";
+			switch (MessageBox.Show(this, text, Name, MessageBoxButtons.OKCancel))
 			{
-			case DialogResult.OK:
-				this.Disconnect();
-				this.MainWindow.RemoveFromList(this);
-				return;
-			case DialogResult.Cancel:
-				e.Cancel = true;
-				return;
-			default:
-				return;
+				case DialogResult.OK:
+					Disconnect();
+					MainWindow.RemoveFromList(this);
+					return;
+				case DialogResult.Cancel:
+					e.Cancel = true;
+					return;
+				default:
+					return;
 			}
 		}
 
@@ -260,21 +240,16 @@ namespace xbWatson
 
 		private void LogAppendText(string text)
 		{
-			this.log.AppendText(text);
+			log.AppendText(text);
 		}
 
 		private SaveFileDialog SaveLogFile;
-
 		private bool fLimitBufferLength;
-
 		private bool fTimestamp;
-
-		private xbWatsonUI MainWindow;
-
+		private readonly xbWatsonUI MainWindow;
 		private string consoleName;
-
 		private CancelEventHandler ClosingEventHandler;
-
 		private DebugManager xboxDebugManager;
+		private bool isDisconnecting = false;
 	}
 }
