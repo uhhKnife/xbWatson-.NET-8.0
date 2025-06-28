@@ -255,7 +255,14 @@ namespace xbWatson
 
 		private void LogAppendText(string text)
 		{
-			log.AppendText(text);
+			if (log.InvokeRequired)
+			{
+				log.Invoke(new Action<string>(LogAppendText), text);
+			}
+			else
+			{
+				log.AppendText(text);
+			}
 		}
 
 		private SaveFileDialog SaveLogFile;
