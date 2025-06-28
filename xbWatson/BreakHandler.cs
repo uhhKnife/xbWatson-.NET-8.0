@@ -11,8 +11,16 @@ namespace xbWatson
 		{
 			string title = string.Format("{0} [{1}]", this.GetDialogTitle(), this.console.Name);
 			string dialogMessage = this.GetDialogMessage(eventInformation);
-			EventDialog eventDialog = new(title, dialogMessage, middleButtonText);
-			return eventDialog.ShowDialog(this.watson);
+			EventDialog eventDialog = new EventDialog(title, dialogMessage, middleButtonText);
+
+			if (watson.InvokeRequired)
+			{
+				return (DialogResult)watson.Invoke(new Func<DialogResult>(() => eventDialog.ShowDialog(watson)));
+			}
+			else
+			{
+				return eventDialog.ShowDialog(watson);
+			}
 		}
 
 		protected abstract string GetDialogTitle();

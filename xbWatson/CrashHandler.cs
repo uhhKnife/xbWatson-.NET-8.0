@@ -80,8 +80,8 @@ namespace xbWatson
 					this.Continue(eventInformation);
 					break;
 				case DialogResult.No:
-                        xbWatson.DumpLog(this.watson, this.console);
-					this.HandleEvent(eventInformation);
+					xbWatson.DumpLog(this.watson, this.console);
+					this.Continue(eventInformation);
 					break;
 				}
 			}

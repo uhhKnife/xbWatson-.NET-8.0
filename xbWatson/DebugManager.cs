@@ -48,9 +48,9 @@ namespace xbWatson
             }
         }
 
-        private async void xboxConsole_OnStdNotify(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
+        private void xboxConsole_OnStdNotify(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
         {
-            await Task.Run(() => HandleEvent(eventCode, eventInformation));
+            HandleEvent(eventCode, eventInformation);
         }
 
         internal void HandleEvent(XboxDebugEventType eventCode, IXboxEventInfo eventInformation)
