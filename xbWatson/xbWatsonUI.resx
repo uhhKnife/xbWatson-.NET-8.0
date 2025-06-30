@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,36 +26,36 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
@@ -117,184 +117,320 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System" name="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuConfigureOnExceptionContinue.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <metadata name="mainMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuFileSaveAs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuItem1.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="menuFileSaveAs.Text" xml:space="preserve">
+    <value>Save &amp;As...</value>
   </data>
-  <data name="menuWindowsTileVertically.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFileExit.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.Text" xml:space="preserve">
-    <value>&amp;Restart</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditCopySelection.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertRestart.Name" xml:space="preserve">
-    <value>menuConfigureOnAssertRestart</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertRestart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPDump.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPDump.Name" xml:space="preserve">
-    <value>menuConfigureOnRIPDump</value>
-  </data>
-  <data name="menuActionsStart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuConfigureDumpFormat.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindows.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindowsCascade.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFile.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsTileVertically.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsTileVertically.Name" xml:space="preserve">
-    <value>menuWindowsTileVertically</value>
-  </data>
-  <data name="menuEdit.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsSelectConsoles.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.SnapToGrid" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditSelectAll.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActions.Text" xml:space="preserve">
-    <value>&amp;Actions</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureDumpLocation.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnRIP.Text" xml:space="preserve">
-    <value>On &amp;RIP</value>
-  </data>
-  <data name="menuEditCopyContents.Text" xml:space="preserve">
-    <value>Cop&amp;y Contents</value>
-  </data>
-  <data name="menuActions.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIP.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPDump.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditLimitBufferLength.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditCopySelection.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDump.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIP.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuFileExit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuFileExit.Name" xml:space="preserve">
-    <value>menuFileExit</value>
-  </data>
-  <data name="menuFileSaveAs.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuItem1.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="menuFileExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
   </data>
   <data name="menuFileExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>
   </data>
-  <data name="menuConfigureDumpFormatMini.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
+  <data name="menuFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
   </data>
-  <data name="menuConfigureOnRIPDump.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="menuFile.Text" xml:space="preserve">
+    <value>&amp;File</value>
   </data>
-  <data name="menuConfigureDumpFormat.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="menuEditCopySelection.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
+  </data>
+  <data name="menuEditCopySelection.Text" xml:space="preserve">
+    <value>&amp;Copy Selection</value>
+  </data>
+  <data name="menuEditCopyContents.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
+  </data>
+  <data name="menuEditCopyContents.Text" xml:space="preserve">
+    <value>Cop&amp;y Contents</value>
+  </data>
+  <data name="menuEditClearWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
+  </data>
+  <data name="menuEditClearWindow.Text" xml:space="preserve">
+    <value>Clea&amp;r Window</value>
+  </data>
+  <data name="menuEditSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
   </data>
   <data name="menuEditSelectAll.Text" xml:space="preserve">
     <value>Select &amp;All</value>
   </data>
-  <data name="menuEditClearWindow.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="menuEditLimitBufferLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
   </data>
-  <data name="menuConfigureAfterDumpContinue.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
+  <data name="menuEditLimitBufferLength.Text" xml:space="preserve">
+    <value>&amp;Limit Buffer Length</value>
   </data>
-  <data name="menuConfigureOnAssertRestart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="menuAddTimestamps.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
   </data>
-  <data name="$this.TrayLargeIcon" type="System.Boolean, mscorlib">
+  <data name="menuAddTimestamps.Text" xml:space="preserve">
+    <value>Add &amp;Timestamps</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 6</value>
+  </data>
+  <data name="darkModeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 22</value>
+  </data>
+  <data name="menuEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="menuEdit.Text" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="menuActionsStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuActionsStart.Text" xml:space="preserve">
+    <value>&amp;Start</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuActionsStop.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="menuConfigureDumpFormatFullHeap.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="menuActionsStop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
   </data>
-  <data name="menuConfigureRestoreDefaults.Enabled" type="System.Boolean, mscorlib">
+  <data name="menuActionsStop.Text" xml:space="preserve">
+    <value>Sto&amp;p</value>
+  </data>
+  <data name="menuActionsSelectConsoles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuActionsSelectConsoles.Text" xml:space="preserve">
+    <value>Select &amp;Consoles...</value>
+  </data>
+  <data name="menuActions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 20</value>
+  </data>
+  <data name="menuActions.Text" xml:space="preserve">
+    <value>&amp;Actions</value>
+  </data>
+  <data name="menuConfigureOnAssertPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnAssertPrompt.Text" xml:space="preserve">
+    <value>&amp;Prompt</value>
+  </data>
+  <data name="menuConfigureOnAssertBreak.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnAssertBreak.Text" xml:space="preserve">
+    <value>&amp;Break</value>
+  </data>
+  <data name="menuConfigureOnAssertContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnAssertContinue.Text" xml:space="preserve">
+    <value>&amp;Continue</value>
+  </data>
+  <data name="menuConfigureOnAssertRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnAssertRestart.Text" xml:space="preserve">
+    <value>&amp;Restart</value>
+  </data>
+  <data name="menuConfigureOnAssert.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureOnAssert.Text" xml:space="preserve">
+    <value>On &amp;Assert</value>
+  </data>
+  <data name="menuConfigureOnExceptionPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnExceptionPrompt.Text" xml:space="preserve">
+    <value>&amp;Prompt</value>
+  </data>
+  <data name="menuConfigureOnExceptionDump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnExceptionDump.Text" xml:space="preserve">
+    <value>&amp;Dump</value>
+  </data>
+  <data name="menuConfigureOnExceptionContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnExceptionContinue.Text" xml:space="preserve">
+    <value>&amp;Continue</value>
+  </data>
+  <data name="menuConfigureOnExceptionRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnExceptionRestart.Text" xml:space="preserve">
+    <value>&amp;Restart</value>
+  </data>
+  <data name="menuConfigureOnException.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureOnException.Text" xml:space="preserve">
+    <value>On &amp;Exception</value>
+  </data>
+  <data name="menuConfigureOnRIPPrompt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnRIPPrompt.Text" xml:space="preserve">
+    <value>&amp;Prompt</value>
+  </data>
+  <data name="menuConfigureOnRIPDump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnRIPDump.Text" xml:space="preserve">
+    <value>&amp;Dump</value>
+  </data>
+  <data name="menuConfigureOnRIPContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnRIPContinue.Text" xml:space="preserve">
+    <value>&amp;Continue</value>
+  </data>
+  <data name="menuConfigureOnRIPRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureOnRIPRestart.Text" xml:space="preserve">
+    <value>&amp;Restart</value>
+  </data>
+  <data name="menuConfigureOnRIP.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureOnRIP.Text" xml:space="preserve">
+    <value>On &amp;RIP</value>
+  </data>
+  <data name="menuConfigureAfterDumpContinue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureAfterDumpContinue.Text" xml:space="preserve">
+    <value>&amp;Continue</value>
+  </data>
+  <data name="menuConfigureAfterDumpRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 22</value>
+  </data>
+  <data name="menuConfigureAfterDumpRestart.Text" xml:space="preserve">
+    <value>&amp;Restart</value>
+  </data>
+  <data name="menuConfigureAfterDump.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureAfterDump.Text" xml:space="preserve">
+    <value>After &amp;Dump</value>
+  </data>
+  <data name="menuConfigureDumpFormatMini.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="menuConfigureDumpFormatMini.Text" xml:space="preserve">
+    <value>&amp;Mini</value>
+  </data>
+  <data name="menuConfigureDumpFormatFullHeap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 22</value>
+  </data>
+  <data name="menuConfigureDumpFormatFullHeap.Text" xml:space="preserve">
+    <value>&amp;Full Heap</value>
+  </data>
+  <data name="menuConfigureDumpFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureDumpFormat.Text" xml:space="preserve">
+    <value>Dump &amp;Format</value>
+  </data>
+  <data name="menuConfigureConnectOnStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureConnectOnStart.Text" xml:space="preserve">
+    <value>&amp;Connect on Start</value>
+  </data>
+  <data name="menuConfigureDumpLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureDumpLocation.Text" xml:space="preserve">
+    <value>Dump &amp;Location...</value>
+  </data>
+  <data name="menuConfigureRestoreDefaults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 22</value>
+  </data>
+  <data name="menuConfigureRestoreDefaults.Text" xml:space="preserve">
+    <value>Re&amp;store Defaults</value>
+  </data>
+  <data name="menuConfigure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 20</value>
+  </data>
+  <data name="menuConfigure.Text" xml:space="preserve">
+    <value>&amp;Configure</value>
+  </data>
+  <data name="menuWindowsTileVertically.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="menuWindowsTileVertically.Text" xml:space="preserve">
+    <value>Tile &amp;Vertically</value>
+  </data>
+  <data name="menuWindowsTileHorizontally.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="menuWindowsTileHorizontally.Text" xml:space="preserve">
+    <value>Tile &amp;Horizontally</value>
+  </data>
+  <data name="menuWindowsCascade.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 22</value>
+  </data>
+  <data name="menuWindowsCascade.Text" xml:space="preserve">
+    <value>&amp;Cascade</value>
+  </data>
+  <data name="menuWindows.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 20</value>
+  </data>
+  <data name="menuWindows.Text" xml:space="preserve">
+    <value>&amp;Windows</value>
+  </data>
+  <data name="menuHelpAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="menuHelpAbout.Text" xml:space="preserve">
+    <value>&amp;About...</value>
+  </data>
+  <data name="menuHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="menuHelp.Text" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="mainMenuStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainMenuStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1192, 24</value>
+  </data>
+  <data name="mainMenuStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Name" xml:space="preserve">
+    <value>mainMenuStrip</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainMenuStrip.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
+    <value>6, 16</value>
   </data>
-  <data name="&gt;&gt;mainMenu1.Name" xml:space="preserve">
-    <value>mainMenu1</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1192, 745</value>
   </data>
-  <data name="&gt;&gt;mainMenu1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MainMenu, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAA
@@ -312,1204 +448,295 @@
         AADAAAAAwAAAGMAAADrgAAB74AAA+/AAAPvwAAD3+AAA9/wAAO//gAMf/8A//w==
 </value>
   </data>
-  <data name="$this.Name" xml:space="preserve">
-    <value>xbWatsonUI</value>
-  </data>
-  <data name="$this.Font" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>xbWatson</value>
   </data>
-  <data name="menuAddTimestamps.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlT</value>
-  </data>
-  <data name="menuActionsSelectConsoles.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuItem2.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuAddTimestamps.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigure.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEdit.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnException.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuFileSaveAs.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsStart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuFileSaveAs.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPDump.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuActionsStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuActionsStart.Name" xml:space="preserve">
-    <value>menuActionsStart</value>
-  </data>
-  <data name="&gt;&gt;menuActionsStop.Name" xml:space="preserve">
-    <value>menuActionsStop</value>
-  </data>
-  <data name="&gt;&gt;menuActionsStop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureAfterDump.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuItem1.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuHelpAbout.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuItem2.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuItem2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsCascade.Text" xml:space="preserve">
-    <value>&amp;Cascade</value>
-  </data>
-  <data name="menuFile.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
-  <data name="menuAddTimestamps.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnException.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsCascade.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuItem1.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.Text" xml:space="preserve">
-    <value>&amp;Continue</value>
-  </data>
-  <data name="menuConfigureAfterDump.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionPrompt.Name" xml:space="preserve">
-    <value>menuConfigureOnExceptionPrompt</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionPrompt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuHelpAbout.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1192, 745</value>
-  </data>
-  <data name="menuWindowsTileVertically.Text" xml:space="preserve">
-    <value>Tile &amp;Vertically</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="$this.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsStop.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuEditCopyContents.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuEditCopyContents.Name" xml:space="preserve">
-    <value>menuEditCopyContents</value>
-  </data>
-  <data name="$this.Locked" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionRestart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionRestart.Name" xml:space="preserve">
-    <value>menuConfigureOnExceptionRestart</value>
-  </data>
-  <data name="menuConfigureDumpLocation.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.DrawGrid" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditSelectAll.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlA</value>
-  </data>
-  <data name="menuHelp.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditCopySelection.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlC</value>
-  </data>
-  <data name="menuConfigureOnAssert.Text" xml:space="preserve">
-    <value>On &amp;Assert</value>
-  </data>
-  <data name="menuActionsSelectConsoles.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActions.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnExceptionContinue.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.AccessibleName" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="menuItem2.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormat.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureRestoreDefaults.Name" xml:space="preserve">
-    <value>menuConfigureRestoreDefaults</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureRestoreDefaults.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureDumpLocation.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditClearWindow.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindowsTileVertically.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssert.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsCascade.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsCascade.Name" xml:space="preserve">
-    <value>menuWindowsCascade</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuEditLimitBufferLength.Name" xml:space="preserve">
-    <value>menuEditLimitBufferLength</value>
-  </data>
-  <data name="&gt;&gt;menuEditLimitBufferLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuActionsStop.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="menuActionsStop.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuEditClearWindow.Text" xml:space="preserve">
-    <value>Clea&amp;r Window</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssert.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuEditClearWindow.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuEditClearWindow.Name" xml:space="preserve">
-    <value>menuEditClearWindow</value>
-  </data>
-  <data name="$this.AutoScaleBaseSize" type="System.Drawing.Size, System.Drawing">
-    <value>5, 13</value>
-  </data>
-  <data name="menuEditLimitBufferLength.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlL</value>
-  </data>
-  <data name="menuEditSelectAll.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActions.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.Text" xml:space="preserve">
-    <value>&amp;Mini</value>
-  </data>
-  <data name="menuFileSaveAs.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuEditCopySelection.Name" xml:space="preserve">
-    <value>menuEditCopySelection</value>
-  </data>
-  <data name="&gt;&gt;menuEditCopySelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuActionsStart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditCopyContents.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindowsCascade.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuHelp.Name" xml:space="preserve">
-    <value>menuHelp</value>
-  </data>
-  <data name="&gt;&gt;menuHelp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuFileExit.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionContinue.Name" xml:space="preserve">
-    <value>menuConfigureOnExceptionContinue</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnExceptionContinue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mainMenu1.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindows.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuActions.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIP.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIP.Name" xml:space="preserve">
-    <value>menuConfigureOnRIP</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertContinue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertContinue.Name" xml:space="preserve">
-    <value>menuConfigureOnAssertContinue</value>
-  </data>
-  <data name="menuWindowsCascade.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIP.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuHelp.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuWindows.Text" xml:space="preserve">
-    <value>&amp;Windows</value>
-  </data>
-  <data name="&gt;&gt;menuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem2.Name" xml:space="preserve">
-    <value>menuItem2</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureConnectOnStart.Name" xml:space="preserve">
-    <value>menuConfigureConnectOnStart</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureConnectOnStart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnException.Text" xml:space="preserve">
-    <value>On &amp;Exception</value>
-  </data>
-  <data name="menuActionsStart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuFileExit.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormat.Text" xml:space="preserve">
-    <value>Dump &amp;Format</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuFile.Name" xml:space="preserve">
+    <value>menuFile</value>
+  </data>
+  <data name="&gt;&gt;menuFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuFileSaveAs.Name" xml:space="preserve">
     <value>menuFileSaveAs</value>
   </data>
   <data name="&gt;&gt;menuFileSaveAs.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureOnRIPDump.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuFileExit.Name" xml:space="preserve">
+    <value>menuFileExit</value>
   </data>
-  <data name="menuWindowsTileVertically.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuFileExit.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditCopyContents.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuItem1.Name" xml:space="preserve">
-    <value>menuItem1</value>
-  </data>
-  <data name="menuEditSelectAll.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuActionsStart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormatMini.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormatMini.Name" xml:space="preserve">
-    <value>menuConfigureDumpFormatMini</value>
-  </data>
-  <data name="menuEditLimitBufferLength.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.Text" xml:space="preserve">
-    <value>&amp;Restart</value>
-  </data>
-  <data name="menuEditClearWindow.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlR</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnRIP.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigure.Name" xml:space="preserve">
-    <value>menuConfigure</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditLimitBufferLength.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuHelpAbout.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsCascade.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuHelpAbout.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormat.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.Text" xml:space="preserve">
-    <value>&amp;Break</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.Text" xml:space="preserve">
-    <value>&amp;Connect on Start</value>
-  </data>
-  <data name="&gt;&gt;menuFile.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuFile.Name" xml:space="preserve">
-    <value>menuFile</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertPrompt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssertPrompt.Name" xml:space="preserve">
-    <value>menuConfigureOnAssertPrompt</value>
-  </data>
-  <data name="&gt;&gt;menuHelpAbout.Name" xml:space="preserve">
-    <value>menuHelpAbout</value>
-  </data>
-  <data name="&gt;&gt;menuHelpAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsTileVertically.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.Text" xml:space="preserve">
-    <value>&amp;Prompt</value>
-  </data>
-  <data name="menuConfigure.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="mainMenu1.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDump.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDump.Name" xml:space="preserve">
-    <value>menuConfigureAfterDump</value>
-  </data>
-  <data name="menuWindowsTileVertically.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuEditSelectAll.Name" xml:space="preserve">
-    <value>menuEditSelectAll</value>
-  </data>
-  <data name="&gt;&gt;menuEditSelectAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsStop.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionContinue.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureDumpLocation.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionRestart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditLimitBufferLength.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnException.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormatFullHeap.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormatFullHeap.Name" xml:space="preserve">
-    <value>menuConfigureDumpFormatFullHeap</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.Text" xml:space="preserve">
-    <value>&amp;Prompt</value>
+  <data name="&gt;&gt;menuFileExit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuEdit.Name" xml:space="preserve">
     <value>menuEdit</value>
   </data>
   <data name="&gt;&gt;menuEdit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuWindowsTileHorizontally.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;menuEditCopySelection.Name" xml:space="preserve">
+    <value>menuEditCopySelection</value>
   </data>
-  <data name="menuHelpAbout.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuEditCopySelection.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureOnExceptionRestart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuEditCopyContents.Name" xml:space="preserve">
+    <value>menuEditCopyContents</value>
   </data>
-  <data name="menuEditClearWindow.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuEditCopyContents.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureAfterDump.Text" xml:space="preserve">
-    <value>After &amp;Dump</value>
+  <data name="&gt;&gt;menuEditClearWindow.Name" xml:space="preserve">
+    <value>menuEditClearWindow</value>
   </data>
-  <data name="menuConfigureAfterDumpRestart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuEditClearWindow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuEditClearWindow.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuEditSelectAll.Name" xml:space="preserve">
+    <value>menuEditSelectAll</value>
   </data>
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
+  <data name="&gt;&gt;menuEditSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureOnRIPRestart.Text" xml:space="preserve">
-    <value>&amp;Restart</value>
+  <data name="&gt;&gt;menuEditLimitBufferLength.Name" xml:space="preserve">
+    <value>menuEditLimitBufferLength</value>
   </data>
-  <data name="menuAddTimestamps.Text" xml:space="preserve">
-    <value>Add &amp;Timestamps</value>
-  </data>
-  <data name="menuEdit.Text" xml:space="preserve">
-    <value>&amp;Edit</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.Text" xml:space="preserve">
-    <value>&amp;Dump</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
-    <value />
-  </data>
-  <data name="menuConfigureOnExceptionContinue.Text" xml:space="preserve">
-    <value>&amp;Continue</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsStop.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsTileHorizontally.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuWindowsTileHorizontally.Name" xml:space="preserve">
-    <value>menuWindowsTileHorizontally</value>
-  </data>
-  <data name="menuActionsSelectConsoles.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionContinue.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFileExit.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuActionsStop.Text" xml:space="preserve">
-    <value>Sto&amp;p</value>
-  </data>
-  <data name="$this.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFileExit.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuAddTimestamps.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuItem1.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.Text" xml:space="preserve">
-    <value>&amp;Full Heap</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.Text" xml:space="preserve">
-    <value>&amp;Continue</value>
-  </data>
-  <data name="$this.GridSize" type="System.Drawing.Size, System.Drawing">
-    <value>8, 8</value>
-  </data>
-  <data name="menuConfigureOnRIP.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssert.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="$this.BackgroundImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="menuConfigureOnRIPPrompt.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpLocation.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="mainMenu1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 17</value>
-  </data>
-  <data name="menuHelp.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureConnectOnStart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEdit.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuAddTimestamps.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsCascade.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="menuConfigure.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssert.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnAssert.Name" xml:space="preserve">
-    <value>menuConfigureOnAssert</value>
-  </data>
-  <data name="menuConfigureOnRIPRestart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuHelp.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-  <data name="menuConfigureOnExceptionContinue.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.Text" xml:space="preserve">
-    <value>&amp;Prompt</value>
-  </data>
-  <data name="menuConfigureOnRIPDump.Text" xml:space="preserve">
-    <value>&amp;Dump</value>
-  </data>
-  <data name="menuConfigureDumpFormat.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPRestart.Name" xml:space="preserve">
-    <value>menuConfigureOnRIPRestart</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPRestart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureAfterDump.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEdit.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuFileSaveAs.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuActions.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuActionsSelectConsoles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuActionsSelectConsoles.Name" xml:space="preserve">
-    <value>menuActionsSelectConsoles</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuFile.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigure.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuActionsSelectConsoles.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionContinue.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindows.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFileSaveAs.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindows.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnExceptionPrompt.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuEditSelectAll.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="menuActionsStart.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditCopyContents.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>CtrlY</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuHelp.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPContinue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPContinue.Name" xml:space="preserve">
-    <value>menuConfigureOnRIPContinue</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.Text" xml:space="preserve">
-    <value>&amp;Continue</value>
-  </data>
-  <data name="menuConfigureOnException.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.Text" xml:space="preserve">
-    <value>&amp;Restart</value>
-  </data>
-  <data name="menuConfigure.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuItem2.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEditCopySelection.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditCopySelection.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuEdit.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuFile.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuActions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuActions.Name" xml:space="preserve">
-    <value>menuActions</value>
-  </data>
-  <data name="menuItem2.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureAfterDump.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuEditLimitBufferLength.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuAddTimestamps.Name" xml:space="preserve">
     <value>menuAddTimestamps</value>
   </data>
   <data name="&gt;&gt;menuAddTimestamps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuActionsSelectConsoles.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
-  <data name="menuEditCopySelection.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>xbWatsonUI</value>
+  <data name="&gt;&gt;darkModeToolStripMenuItem.Name" xml:space="preserve">
+    <value>darkModeToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;darkModeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuEditLimitBufferLength.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuActions.Name" xml:space="preserve">
+    <value>menuActions</value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;menuActions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigure.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuActionsStart.Name" xml:space="preserve">
+    <value>menuActionsStart</value>
   </data>
-  <data name="menuConfigureOnAssert.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuActionsStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureOnRIPDump.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;menuActionsStop.Name" xml:space="preserve">
+    <value>menuActionsStop</value>
   </data>
-  <data name="&gt;&gt;menuConfigureDumpLocation.Name" xml:space="preserve">
-    <value>menuConfigureDumpLocation</value>
+  <data name="&gt;&gt;menuActionsStop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuConfigureDumpLocation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuActionsSelectConsoles.Name" xml:space="preserve">
+    <value>menuActionsSelectConsoles</value>
   </data>
-  <data name="menuItem1.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuActionsSelectConsoles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuAddTimestamps.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
+  <data name="&gt;&gt;menuConfigure.Name" xml:space="preserve">
+    <value>menuConfigure</value>
   </data>
-  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;menuConfigure.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuEditCopySelection.Text" xml:space="preserve">
-    <value>&amp;Copy Selection</value>
+  <data name="&gt;&gt;menuConfigureOnAssert.Name" xml:space="preserve">
+    <value>menuConfigureOnAssert</value>
   </data>
-  <data name="&gt;&gt;menuWindows.Name" xml:space="preserve">
-    <value>menuWindows</value>
+  <data name="&gt;&gt;menuConfigureOnAssert.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;menuWindows.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;menuConfigureOnAssertPrompt.Name" xml:space="preserve">
+    <value>menuConfigureOnAssertPrompt</value>
   </data>
-  <data name="menuConfigureDumpLocation.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDumpContinue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDumpContinue.Name" xml:space="preserve">
-    <value>menuConfigureAfterDumpContinue</value>
-  </data>
-  <data name="menuFile.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureAfterDumpContinue.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFile.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatFullHeap.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuConfigureDumpFormat.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.AccessibleDescription" type="System.Resources.ResXNullRef, System.Windows.Forms">
-    <value />
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>WindowsDefaultLocation</value>
-  </data>
-  <data name="menuConfigureOnRIPDump.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssertBreak.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.Text" xml:space="preserve">
-    <value>Tile &amp;Horizontally</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnException.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuFile.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuWindows.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpLocation.Text" xml:space="preserve">
-    <value>Dump &amp;Location...</value>
-  </data>
-  <data name="menuItem2.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuEditClearWindow.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIP.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureAfterDumpRestart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsTileVertically.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuHelpAbout.Text" xml:space="preserve">
-    <value>&amp;About...</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuItem1.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigure.Text" xml:space="preserve">
-    <value>&amp;Configure</value>
-  </data>
-  <data name="menuFileSaveAs.Text" xml:space="preserve">
-    <value>Save &amp;As...</value>
+  <data name="&gt;&gt;menuConfigureOnAssertPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnAssertBreak.Name" xml:space="preserve">
     <value>menuConfigureOnAssertBreak</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnAssertBreak.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuWindows.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuConfigureOnAssertContinue.Name" xml:space="preserve">
+    <value>menuConfigureOnAssertContinue</value>
   </data>
-  <data name="menuEditCopyContents.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuConfigureOnAssertContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuConfigureOnAssertBreak.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuConfigureOnAssertRestart.Name" xml:space="preserve">
+    <value>menuConfigureOnAssertRestart</value>
   </data>
-  <data name="mainMenu1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Inherit</value>
-  </data>
-  <data name="menuEdit.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureOnRIPPrompt.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditCopyContents.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditCopyContents.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureAfterDump.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.Shortcut" type="System.Windows.Forms.Shortcut, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="menuHelp.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuEditSelectAll.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureDumpFormatMini.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnAssert.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnAssertRestart.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPPrompt.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureOnRIPPrompt.Name" xml:space="preserve">
-    <value>menuConfigureOnRIPPrompt</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureDumpFormat.Name" xml:space="preserve">
-    <value>menuConfigureDumpFormat</value>
-  </data>
-  <data name="menuHelpAbout.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;menuConfigureOnAssertRestart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnException.Name" xml:space="preserve">
     <value>menuConfigureOnException</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnException.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="menuActionsSelectConsoles.Text" xml:space="preserve">
-    <value>Select &amp;Consoles...</value>
+  <data name="&gt;&gt;menuConfigureOnExceptionPrompt.Name" xml:space="preserve">
+    <value>menuConfigureOnExceptionPrompt</value>
   </data>
-  <data name="menuConfigureOnAssertPrompt.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnRIPContinue.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuWindowsTileHorizontally.DefaultModifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuActionsStop.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDumpRestart.Name" xml:space="preserve">
-    <value>menuConfigureAfterDumpRestart</value>
-  </data>
-  <data name="&gt;&gt;menuConfigureAfterDumpRestart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="menuConfigureOnAssertContinue.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuConfigureOnException.ShowShortcut" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuHelp.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureOnExceptionDump.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="$this.AutoScrollMargin" type="System.Drawing.Size, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuConfigureOnAssertPrompt.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuActionsStart.Text" xml:space="preserve">
-    <value>&amp;Start</value>
-  </data>
-  <data name="menuEditLimitBufferLength.Text" xml:space="preserve">
-    <value>&amp;Limit Buffer Length</value>
-  </data>
-  <data name="menuConfigureOnAssert.Modifiers" type="System.CodeDom.MemberAttributes, System">
-    <value>Private</value>
-  </data>
-  <data name="menuActions.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="menuConfigureRestoreDefaults.Text" xml:space="preserve">
-    <value>Re&amp;store Defaults</value>
+  <data name="&gt;&gt;menuConfigureOnExceptionPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnExceptionDump.Name" xml:space="preserve">
     <value>menuConfigureOnExceptionDump</value>
   </data>
   <data name="&gt;&gt;menuConfigureOnExceptionDump.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuItem, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnExceptionContinue.Name" xml:space="preserve">
+    <value>menuConfigureOnExceptionContinue</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnExceptionContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnExceptionRestart.Name" xml:space="preserve">
+    <value>menuConfigureOnExceptionRestart</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnExceptionRestart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIP.Name" xml:space="preserve">
+    <value>menuConfigureOnRIP</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIP.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPPrompt.Name" xml:space="preserve">
+    <value>menuConfigureOnRIPPrompt</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPPrompt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPDump.Name" xml:space="preserve">
+    <value>menuConfigureOnRIPDump</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPDump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPContinue.Name" xml:space="preserve">
+    <value>menuConfigureOnRIPContinue</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPRestart.Name" xml:space="preserve">
+    <value>menuConfigureOnRIPRestart</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureOnRIPRestart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDump.Name" xml:space="preserve">
+    <value>menuConfigureAfterDump</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDump.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDumpContinue.Name" xml:space="preserve">
+    <value>menuConfigureAfterDumpContinue</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDumpContinue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDumpRestart.Name" xml:space="preserve">
+    <value>menuConfigureAfterDumpRestart</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureAfterDumpRestart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormat.Name" xml:space="preserve">
+    <value>menuConfigureDumpFormat</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormatMini.Name" xml:space="preserve">
+    <value>menuConfigureDumpFormatMini</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormatMini.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormatFullHeap.Name" xml:space="preserve">
+    <value>menuConfigureDumpFormatFullHeap</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpFormatFullHeap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureConnectOnStart.Name" xml:space="preserve">
+    <value>menuConfigureConnectOnStart</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureConnectOnStart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpLocation.Name" xml:space="preserve">
+    <value>menuConfigureDumpLocation</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureDumpLocation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureRestoreDefaults.Name" xml:space="preserve">
+    <value>menuConfigureRestoreDefaults</value>
+  </data>
+  <data name="&gt;&gt;menuConfigureRestoreDefaults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuWindows.Name" xml:space="preserve">
+    <value>menuWindows</value>
+  </data>
+  <data name="&gt;&gt;menuWindows.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsTileVertically.Name" xml:space="preserve">
+    <value>menuWindowsTileVertically</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsTileVertically.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsTileHorizontally.Name" xml:space="preserve">
+    <value>menuWindowsTileHorizontally</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsTileHorizontally.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsCascade.Name" xml:space="preserve">
+    <value>menuWindowsCascade</value>
+  </data>
+  <data name="&gt;&gt;menuWindowsCascade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuHelp.Name" xml:space="preserve">
+    <value>menuHelp</value>
+  </data>
+  <data name="&gt;&gt;menuHelp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuHelpAbout.Name" xml:space="preserve">
+    <value>menuHelpAbout</value>
+  </data>
+  <data name="&gt;&gt;menuHelpAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>xbWatsonUI</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

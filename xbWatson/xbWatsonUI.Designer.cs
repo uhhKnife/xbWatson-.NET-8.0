@@ -2,6 +2,7 @@ namespace xbWatson
 {
 	public partial class xbWatsonUI : global::System.Windows.Forms.Form
 	{
+		private System.ComponentModel.IContainer components = null;
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -9,350 +10,366 @@ namespace xbWatson
 				this.components.Dispose();
 			}
 			base.Dispose(disposing);
-			this.resources.ReleaseAllResources();
 		}
-		private void InitializeComponent()
-		{
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(xbWatsonUI));
-            this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuFile = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuFileExit = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEdit = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEditCopySelection = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEditCopyContents = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEditClearWindow = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEditSelectAll = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuEditLimitBufferLength = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuAddTimestamps = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuActions = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuActionsStart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuActionsStop = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuActionsSelectConsoles = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigure = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnAssert = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnAssertPrompt = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnAssertBreak = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnAssertContinue = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnAssertRestart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnException = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnExceptionPrompt = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnExceptionDump = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnExceptionContinue = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnExceptionRestart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnRIP = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnRIPPrompt = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnRIPDump = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnRIPContinue = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureOnRIPRestart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureAfterDump = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureAfterDumpContinue = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureAfterDumpRestart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureDumpFormat = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureDumpFormatMini = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureDumpFormatFullHeap = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureConnectOnStart = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureDumpLocation = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuConfigureRestoreDefaults = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuWindows = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuWindowsTileVertically = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuWindowsTileHorizontally = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuWindowsCascade = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuHelp = new System.Windows.Forms.ToolStripMenuItem ();
-            this.menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem ();
-            this.SuspendLayout();
+            mainMenuStrip = new System.Windows.Forms.MenuStrip();
+            menuFile = new System.Windows.Forms.ToolStripMenuItem();
+            menuFileSaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            menuFileExit = new System.Windows.Forms.ToolStripMenuItem();
+            menuEdit = new System.Windows.Forms.ToolStripMenuItem();
+            menuEditCopySelection = new System.Windows.Forms.ToolStripMenuItem();
+            menuEditCopyContents = new System.Windows.Forms.ToolStripMenuItem();
+            menuEditClearWindow = new System.Windows.Forms.ToolStripMenuItem();
+            menuEditSelectAll = new System.Windows.Forms.ToolStripMenuItem();
+            menuEditLimitBufferLength = new System.Windows.Forms.ToolStripMenuItem();
+            menuAddTimestamps = new System.Windows.Forms.ToolStripMenuItem();
+            toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            darkModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            menuActions = new System.Windows.Forms.ToolStripMenuItem();
+            menuActionsStart = new System.Windows.Forms.ToolStripMenuItem();
+            menuActionsStop = new System.Windows.Forms.ToolStripMenuItem();
+            menuActionsSelectConsoles = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigure = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnAssert = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnAssertPrompt = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnAssertBreak = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnAssertContinue = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnAssertRestart = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnException = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnExceptionPrompt = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnExceptionDump = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnExceptionContinue = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnExceptionRestart = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnRIP = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnRIPPrompt = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnRIPDump = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnRIPContinue = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureOnRIPRestart = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureAfterDump = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureAfterDumpContinue = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureAfterDumpRestart = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureDumpFormat = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureDumpFormatMini = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureDumpFormatFullHeap = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureConnectOnStart = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureDumpLocation = new System.Windows.Forms.ToolStripMenuItem();
+            menuConfigureRestoreDefaults = new System.Windows.Forms.ToolStripMenuItem();
+            menuWindows = new System.Windows.Forms.ToolStripMenuItem();
+            menuWindowsTileVertically = new System.Windows.Forms.ToolStripMenuItem();
+            menuWindowsTileHorizontally = new System.Windows.Forms.ToolStripMenuItem();
+            menuWindowsCascade = new System.Windows.Forms.ToolStripMenuItem();
+            menuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            menuHelpAbout = new System.Windows.Forms.ToolStripMenuItem();
+            mainMenuStrip.SuspendLayout();
+            SuspendLayout();
             // 
             // mainMenuStrip
             // 
-            this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuFile,
-            this.menuEdit,
-            this.menuActions,
-            this.menuConfigure,
-            this.menuWindows,
-            this.menuHelp});
+            mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { menuFile, menuEdit, menuActions, menuConfigure, menuWindows, menuHelp });
+            resources.ApplyResources(mainMenuStrip, "mainMenuStrip");
+            mainMenuStrip.Name = "mainMenuStrip";
             // 
             // menuFile
             // 
-            this.menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuFileSaveAs,
-            this.menuFileExit});
-            resources.ApplyResources(this.menuFile, "menuFile");
+            menuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuFileSaveAs, menuFileExit });
+            menuFile.Name = "menuFile";
+            resources.ApplyResources(menuFile, "menuFile");
             // 
             // menuFileSaveAs
             // 
-            this.menuFileSaveAs.Click += new System.EventHandler(this.menuFileSaveAs_Click);
-            resources.ApplyResources(this.menuFileSaveAs, "menuFileSaveAs");
+            menuFileSaveAs.Name = "menuFileSaveAs";
+            resources.ApplyResources(menuFileSaveAs, "menuFileSaveAs");
+            menuFileSaveAs.Click += menuFileSaveAs_Click;
             // 
             // menuFileExit
             // 
-            this.menuFileExit.Click += new System.EventHandler(this.menuFileExit_Click);
-            resources.ApplyResources(this.menuFileExit, "menuFileExit");
+            menuFileExit.Name = "menuFileExit";
+            resources.ApplyResources(menuFileExit, "menuFileExit");
+            menuFileExit.Click += menuFileExit_Click;
             // 
             // menuEdit
             // 
-            this.menuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuEditCopySelection,
-            this.menuEditCopyContents,
-            this.menuEditClearWindow,
-            this.menuEditSelectAll,
-            this.menuEditLimitBufferLength,
-            this.menuAddTimestamps,
-            this.menuConfigureRestoreDefaults});
-            resources.ApplyResources(this.menuEdit, "menuEdit");
+            menuEdit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuEditCopySelection, menuEditCopyContents, menuEditClearWindow, menuEditSelectAll, menuEditLimitBufferLength, menuAddTimestamps, toolStripSeparator1, darkModeToolStripMenuItem });
+            menuEdit.Name = "menuEdit";
+            resources.ApplyResources(menuEdit, "menuEdit");
             // 
             // menuEditCopySelection
             // 
-            this.menuEditCopySelection.Click += new System.EventHandler(this.menuEditCopySelection_Click);
-            resources.ApplyResources(this.menuEditCopySelection, "menuEditCopySelection");
+            menuEditCopySelection.Name = "menuEditCopySelection";
+            resources.ApplyResources(menuEditCopySelection, "menuEditCopySelection");
+            menuEditCopySelection.Click += menuEditCopySelection_Click;
             // 
             // menuEditCopyContents
             // 
-            this.menuEditCopyContents.Click += new System.EventHandler(this.menuEditCopyContents_Click);
-            resources.ApplyResources(this.menuEditCopyContents, "menuEditCopyContents");
+            menuEditCopyContents.Name = "menuEditCopyContents";
+            resources.ApplyResources(menuEditCopyContents, "menuEditCopyContents");
+            menuEditCopyContents.Click += menuEditCopyContents_Click;
             // 
             // menuEditClearWindow
             // 
-            this.menuEditClearWindow.Click += new System.EventHandler(this.menuEditClearWindow_Click);
-            resources.ApplyResources(this.menuEditClearWindow, "menuEditClearWindow");
+            menuEditClearWindow.Name = "menuEditClearWindow";
+            resources.ApplyResources(menuEditClearWindow, "menuEditClearWindow");
+            menuEditClearWindow.Click += menuEditClearWindow_Click;
             // 
             // menuEditSelectAll
             // 
-            this.menuEditSelectAll.Click += new System.EventHandler(this.menuEditSelectAll_Click);
-            resources.ApplyResources(this.menuEditSelectAll, "menuEditSelectAll");
+            menuEditSelectAll.Name = "menuEditSelectAll";
+            resources.ApplyResources(menuEditSelectAll, "menuEditSelectAll");
+            menuEditSelectAll.Click += menuEditSelectAll_Click;
             // 
             // menuEditLimitBufferLength
             // 
-            this.menuEditLimitBufferLength.Click += new System.EventHandler(this.menuEditLimitBufferLength_Click);
-            resources.ApplyResources(this.menuEditLimitBufferLength, "menuEditLimitBufferLength");
+            menuEditLimitBufferLength.Name = "menuEditLimitBufferLength";
+            resources.ApplyResources(menuEditLimitBufferLength, "menuEditLimitBufferLength");
+            menuEditLimitBufferLength.Click += menuEditLimitBufferLength_Click;
             // 
             // menuAddTimestamps
             // 
-            this.menuAddTimestamps.Click += new System.EventHandler(this.menuAddTimestamps_Click);
-            resources.ApplyResources(this.menuAddTimestamps, "menuAddTimestamps");
+            menuAddTimestamps.Name = "menuAddTimestamps";
+            resources.ApplyResources(menuAddTimestamps, "menuAddTimestamps");
+            menuAddTimestamps.Click += menuAddTimestamps_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // darkModeToolStripMenuItem
+            // 
+            darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
+            resources.ApplyResources(darkModeToolStripMenuItem, "darkModeToolStripMenuItem");
+            darkModeToolStripMenuItem.Click += darkModeToolStripMenuItem_Click;
             // 
             // menuActions
             // 
-            this.menuActions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuActionsStart,
-            this.menuActionsStop,
-            this.menuActionsSelectConsoles});
-            resources.ApplyResources(this.menuActions, "menuActions");
+            menuActions.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuActionsStart, menuActionsStop, menuActionsSelectConsoles });
+            menuActions.Name = "menuActions";
+            resources.ApplyResources(menuActions, "menuActions");
             // 
             // menuActionsStart
             // 
-            this.menuActionsStart.Click += new System.EventHandler(this.menuActionsStart_Click);
-            resources.ApplyResources(this.menuActionsStart, "menuActionsStart");
+            menuActionsStart.Name = "menuActionsStart";
+            resources.ApplyResources(menuActionsStart, "menuActionsStart");
+            menuActionsStart.Click += menuActionsStart_Click;
             // 
             // menuActionsStop
             // 
-            this.menuActionsStop.Click += new System.EventHandler(this.menuActionsStop_Click);
-            resources.ApplyResources(this.menuActionsStop, "menuActionsStop");
+            resources.ApplyResources(menuActionsStop, "menuActionsStop");
+            menuActionsStop.Name = "menuActionsStop";
+            menuActionsStop.Click += menuActionsStop_Click;
             // 
             // menuActionsSelectConsoles
             // 
-            this.menuActionsSelectConsoles.Click += new System.EventHandler(this.menuActionsSelectConsoles_Click);
-            resources.ApplyResources(this.menuActionsSelectConsoles, "menuActionsSelectConsoles");
+            menuActionsSelectConsoles.Name = "menuActionsSelectConsoles";
+            resources.ApplyResources(menuActionsSelectConsoles, "menuActionsSelectConsoles");
+            menuActionsSelectConsoles.Click += menuActionsSelectConsoles_Click;
             // 
             // menuConfigure
             // 
-            this.menuConfigure.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuConfigureOnAssert,
-            this.menuConfigureOnException,
-            this.menuConfigureOnRIP,
-            this.menuConfigureAfterDump,
-            this.menuConfigureDumpFormat,
-            this.menuConfigureConnectOnStart,
-            this.menuConfigureDumpLocation,
-            this.menuConfigureRestoreDefaults});
-            resources.ApplyResources(this.menuConfigure, "menuConfigure");
+            menuConfigure.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureOnAssert, menuConfigureOnException, menuConfigureOnRIP, menuConfigureAfterDump, menuConfigureDumpFormat, menuConfigureConnectOnStart, menuConfigureDumpLocation, menuConfigureRestoreDefaults });
+            menuConfigure.Name = "menuConfigure";
+            resources.ApplyResources(menuConfigure, "menuConfigure");
             // 
             // menuConfigureOnAssert
             // 
-            this.menuConfigureOnAssert.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConfigureOnAssertPrompt,
-            this.menuConfigureOnAssertBreak,
-            this.menuConfigureOnAssertContinue,
-            this.menuConfigureOnAssertRestart});
-            resources.ApplyResources(this.menuConfigureOnAssert, "menuConfigureOnAssert");
+            menuConfigureOnAssert.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureOnAssertPrompt, menuConfigureOnAssertBreak, menuConfigureOnAssertContinue, menuConfigureOnAssertRestart });
+            menuConfigureOnAssert.Name = "menuConfigureOnAssert";
+            resources.ApplyResources(menuConfigureOnAssert, "menuConfigureOnAssert");
             // 
             // menuConfigureOnAssertPrompt
             // 
-            this.menuConfigureOnAssertPrompt.Click += new System.EventHandler(this.menuConfigureOnAssertPrompt_Click);
-            resources.ApplyResources(this.menuConfigureOnAssertPrompt, "menuConfigureOnAssertPrompt");
+            menuConfigureOnAssertPrompt.Name = "menuConfigureOnAssertPrompt";
+            resources.ApplyResources(menuConfigureOnAssertPrompt, "menuConfigureOnAssertPrompt");
+            menuConfigureOnAssertPrompt.Click += menuConfigureOnAssertPrompt_Click;
             // 
             // menuConfigureOnAssertBreak
             // 
-            this.menuConfigureOnAssertBreak.Click += new System.EventHandler(this.menuConfigureOnAssertBreak_Click);
-            resources.ApplyResources(this.menuConfigureOnAssertBreak, "menuConfigureOnAssertBreak");
+            menuConfigureOnAssertBreak.Name = "menuConfigureOnAssertBreak";
+            resources.ApplyResources(menuConfigureOnAssertBreak, "menuConfigureOnAssertBreak");
+            menuConfigureOnAssertBreak.Click += menuConfigureOnAssertBreak_Click;
             // 
             // menuConfigureOnAssertContinue
             // 
-            this.menuConfigureOnAssertContinue.Click += new System.EventHandler(this.menuConfigureOnAssertContinue_Click);
-            resources.ApplyResources(this.menuConfigureOnAssertContinue, "menuConfigureOnAssertContinue");
+            menuConfigureOnAssertContinue.Name = "menuConfigureOnAssertContinue";
+            resources.ApplyResources(menuConfigureOnAssertContinue, "menuConfigureOnAssertContinue");
+            menuConfigureOnAssertContinue.Click += menuConfigureOnAssertContinue_Click;
             // 
             // menuConfigureOnAssertRestart
             // 
-            this.menuConfigureOnAssertRestart.Click += new System.EventHandler(this.menuConfigureOnAssertRestart_Click);
-            resources.ApplyResources(this.menuConfigureOnAssertRestart, "menuConfigureOnAssertRestart");
+            menuConfigureOnAssertRestart.Name = "menuConfigureOnAssertRestart";
+            resources.ApplyResources(menuConfigureOnAssertRestart, "menuConfigureOnAssertRestart");
+            menuConfigureOnAssertRestart.Click += menuConfigureOnAssertRestart_Click;
             // 
             // menuConfigureOnException
             // 
-            this.menuConfigureOnException.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConfigureOnExceptionPrompt,
-            this.menuConfigureOnExceptionDump,
-            this.menuConfigureOnExceptionContinue,
-            this.menuConfigureOnExceptionRestart});
-            resources.ApplyResources(this.menuConfigureOnException, "menuConfigureOnException");
+            menuConfigureOnException.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureOnExceptionPrompt, menuConfigureOnExceptionDump, menuConfigureOnExceptionContinue, menuConfigureOnExceptionRestart });
+            menuConfigureOnException.Name = "menuConfigureOnException";
+            resources.ApplyResources(menuConfigureOnException, "menuConfigureOnException");
             // 
             // menuConfigureOnExceptionPrompt
             // 
-            this.menuConfigureOnExceptionPrompt.Click += new System.EventHandler(this.menuConfigureOnExceptionPrompt_Click);
-            resources.ApplyResources(this.menuConfigureOnExceptionPrompt, "menuConfigureOnExceptionPrompt");
+            menuConfigureOnExceptionPrompt.Name = "menuConfigureOnExceptionPrompt";
+            resources.ApplyResources(menuConfigureOnExceptionPrompt, "menuConfigureOnExceptionPrompt");
+            menuConfigureOnExceptionPrompt.Click += menuConfigureOnExceptionPrompt_Click;
             // 
             // menuConfigureOnExceptionDump
             // 
-            this.menuConfigureOnExceptionDump.Click += new System.EventHandler(this.menuConfigureOnExceptionDump_Click);
-            resources.ApplyResources(this.menuConfigureOnExceptionDump, "menuConfigureOnExceptionDump");
+            menuConfigureOnExceptionDump.Name = "menuConfigureOnExceptionDump";
+            resources.ApplyResources(menuConfigureOnExceptionDump, "menuConfigureOnExceptionDump");
+            menuConfigureOnExceptionDump.Click += menuConfigureOnExceptionDump_Click;
             // 
             // menuConfigureOnExceptionContinue
             // 
-            this.menuConfigureOnExceptionContinue.Click += new System.EventHandler(this.menuConfigureOnExceptionContinue_Click);
-            resources.ApplyResources(this.menuConfigureOnExceptionContinue, "menuConfigureOnExceptionContinue");
+            menuConfigureOnExceptionContinue.Name = "menuConfigureOnExceptionContinue";
+            resources.ApplyResources(menuConfigureOnExceptionContinue, "menuConfigureOnExceptionContinue");
+            menuConfigureOnExceptionContinue.Click += menuConfigureOnExceptionContinue_Click;
             // 
             // menuConfigureOnExceptionRestart
             // 
-            this.menuConfigureOnExceptionRestart.Click += new System.EventHandler(this.menuConfigureOnExceptionRestart_Click);
-            resources.ApplyResources(this.menuConfigureOnExceptionRestart, "menuConfigureOnExceptionRestart");
+            menuConfigureOnExceptionRestart.Name = "menuConfigureOnExceptionRestart";
+            resources.ApplyResources(menuConfigureOnExceptionRestart, "menuConfigureOnExceptionRestart");
+            menuConfigureOnExceptionRestart.Click += menuConfigureOnExceptionRestart_Click;
             // 
             // menuConfigureOnRIP
             // 
-            this.menuConfigureOnRIP.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConfigureOnRIPPrompt,
-            this.menuConfigureOnRIPDump,
-            this.menuConfigureOnRIPContinue,
-            this.menuConfigureOnRIPRestart});
-            resources.ApplyResources(this.menuConfigureOnRIP, "menuConfigureOnRIP");
+            menuConfigureOnRIP.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureOnRIPPrompt, menuConfigureOnRIPDump, menuConfigureOnRIPContinue, menuConfigureOnRIPRestart });
+            menuConfigureOnRIP.Name = "menuConfigureOnRIP";
+            resources.ApplyResources(menuConfigureOnRIP, "menuConfigureOnRIP");
             // 
             // menuConfigureOnRIPPrompt
             // 
-            this.menuConfigureOnRIPPrompt.Click += new System.EventHandler(this.menuConfigureOnRIPPrompt_Click);
-            resources.ApplyResources(this.menuConfigureOnRIPPrompt, "menuConfigureOnRIPPrompt");
+            menuConfigureOnRIPPrompt.Name = "menuConfigureOnRIPPrompt";
+            resources.ApplyResources(menuConfigureOnRIPPrompt, "menuConfigureOnRIPPrompt");
+            menuConfigureOnRIPPrompt.Click += menuConfigureOnRIPPrompt_Click;
             // 
             // menuConfigureOnRIPDump
             // 
-            this.menuConfigureOnRIPDump.Click += new System.EventHandler(this.menuConfigureOnRIPDump_Click);
-            resources.ApplyResources(this.menuConfigureOnRIPDump, "menuConfigureOnRIPDump");
+            menuConfigureOnRIPDump.Name = "menuConfigureOnRIPDump";
+            resources.ApplyResources(menuConfigureOnRIPDump, "menuConfigureOnRIPDump");
+            menuConfigureOnRIPDump.Click += menuConfigureOnRIPDump_Click;
             // 
             // menuConfigureOnRIPContinue
             // 
-            this.menuConfigureOnRIPContinue.Click += new System.EventHandler(this.menuConfigureOnRIPContinue_Click);
-            resources.ApplyResources(this.menuConfigureOnRIPContinue, "menuConfigureOnRIPContinue");
+            menuConfigureOnRIPContinue.Name = "menuConfigureOnRIPContinue";
+            resources.ApplyResources(menuConfigureOnRIPContinue, "menuConfigureOnRIPContinue");
+            menuConfigureOnRIPContinue.Click += menuConfigureOnRIPContinue_Click;
             // 
             // menuConfigureOnRIPRestart
             // 
-            this.menuConfigureOnRIPRestart.Click += new System.EventHandler(this.menuConfigureOnRIPRestart_Click);
-            resources.ApplyResources(this.menuConfigureOnRIPRestart, "menuConfigureOnRIPRestart");
+            menuConfigureOnRIPRestart.Name = "menuConfigureOnRIPRestart";
+            resources.ApplyResources(menuConfigureOnRIPRestart, "menuConfigureOnRIPRestart");
+            menuConfigureOnRIPRestart.Click += menuConfigureOnRIPRestart_Click;
             // 
             // menuConfigureAfterDump
             // 
-            this.menuConfigureAfterDump.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConfigureAfterDumpContinue,
-            this.menuConfigureAfterDumpRestart});
-            resources.ApplyResources(this.menuConfigureAfterDump, "menuConfigureAfterDump");
+            menuConfigureAfterDump.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureAfterDumpContinue, menuConfigureAfterDumpRestart });
+            menuConfigureAfterDump.Name = "menuConfigureAfterDump";
+            resources.ApplyResources(menuConfigureAfterDump, "menuConfigureAfterDump");
             // 
             // menuConfigureAfterDumpContinue
             // 
-            this.menuConfigureAfterDumpContinue.Click += new System.EventHandler(this.menuConfigureAfterDumpContinue_Click);
-            resources.ApplyResources(this.menuConfigureAfterDumpContinue, "menuConfigureAfterDumpContinue");
+            menuConfigureAfterDumpContinue.Name = "menuConfigureAfterDumpContinue";
+            resources.ApplyResources(menuConfigureAfterDumpContinue, "menuConfigureAfterDumpContinue");
+            menuConfigureAfterDumpContinue.Click += menuConfigureAfterDumpContinue_Click;
             // 
             // menuConfigureAfterDumpRestart
             // 
-            this.menuConfigureAfterDumpRestart.Click += new System.EventHandler(this.menuConfigureAfterDumpRestart_Click);
-            resources.ApplyResources(this.menuConfigureAfterDumpRestart, "menuConfigureAfterDumpRestart");
+            menuConfigureAfterDumpRestart.Name = "menuConfigureAfterDumpRestart";
+            resources.ApplyResources(menuConfigureAfterDumpRestart, "menuConfigureAfterDumpRestart");
+            menuConfigureAfterDumpRestart.Click += menuConfigureAfterDumpRestart_Click;
             // 
             // menuConfigureDumpFormat
             // 
-            this.menuConfigureDumpFormat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuConfigureDumpFormatMini,
-            this.menuConfigureDumpFormatFullHeap});
-            resources.ApplyResources(this.menuConfigureDumpFormat, "menuConfigureDumpFormat");
+            menuConfigureDumpFormat.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuConfigureDumpFormatMini, menuConfigureDumpFormatFullHeap });
+            menuConfigureDumpFormat.Name = "menuConfigureDumpFormat";
+            resources.ApplyResources(menuConfigureDumpFormat, "menuConfigureDumpFormat");
             // 
             // menuConfigureDumpFormatMini
             // 
-            this.menuConfigureDumpFormatMini.Click += new System.EventHandler(this.menuConfigureDumpFormatMini_Click);
-            resources.ApplyResources(this.menuConfigureDumpFormatMini, "menuConfigureDumpFormatMini");
+            menuConfigureDumpFormatMini.Name = "menuConfigureDumpFormatMini";
+            resources.ApplyResources(menuConfigureDumpFormatMini, "menuConfigureDumpFormatMini");
+            menuConfigureDumpFormatMini.Click += menuConfigureDumpFormatMini_Click;
             // 
             // menuConfigureDumpFormatFullHeap
             // 
-            this.menuConfigureDumpFormatFullHeap.Click += new System.EventHandler(this.menuConfigureDumpFormatFullHeap_Click);
-            resources.ApplyResources(this.menuConfigureDumpFormatFullHeap, "menuConfigureDumpFormatFullHeap");
+            menuConfigureDumpFormatFullHeap.Name = "menuConfigureDumpFormatFullHeap";
+            resources.ApplyResources(menuConfigureDumpFormatFullHeap, "menuConfigureDumpFormatFullHeap");
+            menuConfigureDumpFormatFullHeap.Click += menuConfigureDumpFormatFullHeap_Click;
             // 
             // menuConfigureConnectOnStart
             // 
-            this.menuConfigureConnectOnStart.Checked = true;
-            this.menuConfigureConnectOnStart.Click += new System.EventHandler(this.menuConfigureConnectOnStart_Click);
-            resources.ApplyResources(this.menuConfigureConnectOnStart, "menuConfigureConnectOnStart");
+            menuConfigureConnectOnStart.Checked = true;
+            menuConfigureConnectOnStart.CheckState = System.Windows.Forms.CheckState.Checked;
+            menuConfigureConnectOnStart.Name = "menuConfigureConnectOnStart";
+            resources.ApplyResources(menuConfigureConnectOnStart, "menuConfigureConnectOnStart");
+            menuConfigureConnectOnStart.Click += menuConfigureConnectOnStart_Click;
             // 
             // menuConfigureDumpLocation
             // 
-            this.menuConfigureDumpLocation.Click += new System.EventHandler(this.menuConfigureDumpLocation_Click);
-            resources.ApplyResources(this.menuConfigureDumpLocation, "menuConfigureDumpLocation");
+            menuConfigureDumpLocation.Name = "menuConfigureDumpLocation";
+            resources.ApplyResources(menuConfigureDumpLocation, "menuConfigureDumpLocation");
+            menuConfigureDumpLocation.Click += menuConfigureDumpLocation_Click;
             // 
             // menuConfigureRestoreDefaults
             // 
-            this.menuConfigureRestoreDefaults.Click += new System.EventHandler(this.menuConfigureRestoreDefaults_Click);
-            resources.ApplyResources(this.menuConfigureRestoreDefaults, "menuConfigureRestoreDefaults");
+            menuConfigureRestoreDefaults.Name = "menuConfigureRestoreDefaults";
+            resources.ApplyResources(menuConfigureRestoreDefaults, "menuConfigureRestoreDefaults");
+            menuConfigureRestoreDefaults.Click += menuConfigureRestoreDefaults_Click;
             // 
             // menuWindows
             // 
-            this.menuWindows.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuWindowsTileVertically,
-            this.menuWindowsTileHorizontally,
-            this.menuWindowsCascade});
-            resources.ApplyResources(this.menuWindows, "menuWindows");
+            menuWindows.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuWindowsTileVertically, menuWindowsTileHorizontally, menuWindowsCascade });
+            menuWindows.Name = "menuWindows";
+            resources.ApplyResources(menuWindows, "menuWindows");
             // 
             // menuWindowsTileVertically
             // 
-            this.menuWindowsTileVertically.Click += new System.EventHandler(this.menuWindowsTileVertically_Click);
-            resources.ApplyResources(this.menuWindowsTileVertically, "menuWindowsTileVertically");
+            menuWindowsTileVertically.Name = "menuWindowsTileVertically";
+            resources.ApplyResources(menuWindowsTileVertically, "menuWindowsTileVertically");
+            menuWindowsTileVertically.Click += menuWindowsTileVertically_Click;
             // 
-            // menuWindowsTileHorizontally
-            // 
-            this.menuWindowsTileHorizontally.Click += new System.EventHandler(this.menuWindowsTileHorizontally_Click);
-            resources.ApplyResources(this.menuWindowsTileHorizontally, "menuWindowsTileHorizontally");
+            // menuWinleHorizontally";
+            resources.ApplyResources(menuWindowsTileHorizontally, "menuWindowsTileHorizontally");
+            menuWindowsTileHorizontally.Click += menuWindowsTileHorizontally_Click;
             // 
             // menuWindowsCascade
             // 
-            this.menuWindowsCascade.Click += new System.EventHandler(this.menuWindowsCascade_Click);
-            resources.ApplyResources(this.menuWindowsCascade, "menuWindowsCascade");
+            menuWindowsCascade.Name = "menuWindowsCascade";
+            resources.ApplyResources(menuWindowsCascade, "menuWindowsCascade");
+            menuWindowsCascade.Click += menuWindowsCascade_Click;
             // 
             // menuHelp
             // 
-            this.menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem [] {
-            this.menuHelpAbout});
-            resources.ApplyResources(this.menuHelp, "menuHelp");
+            menuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { menuHelpAbout });
+            menuHelp.Name = "menuHelp";
+            resources.ApplyResources(menuHelp, "menuHelp");
             // 
             // menuHelpAbout
             // 
-            this.menuHelpAbout.Click += new System.EventHandler(this.menuHelpAbout_Click);
-            resources.ApplyResources(this.menuHelpAbout, "menuHelpAbout");
+            menuHelpAbout.Name = "menuHelpAbout";
+            resources.ApplyResources(menuHelpAbout, "menuHelpAbout");
+            menuHelpAbout.Click += menuHelpAbout_Click;
             // 
             // xbWatsonUI
             // 
             resources.ApplyResources(this, "$this");
-            this.IsMdiContainer = true;
-            this.KeyPreview = true;
-            this.MainMenuStrip = this.mainMenuStrip;
-            this.Controls.Add(this.mainMenuStrip);
-            this.Name = "xbWatsonUI";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.xbWatsonUI_Closing);
-            this.Load += new System.EventHandler(this.xbWatson_Load);
-            this.ResumeLayout(false);
+            Controls.Add(mainMenuStrip);
+            IsMdiContainer = true;
+            KeyPreview = true;
+            MainMenuStrip = mainMenuStrip;
+            Name = "xbWatsonUI";
+            FormClosing += xbWatsonUI_FormClosing;
+            Load += xbWatson_Load;
+            mainMenuStrip.ResumeLayout(false);
+            mainMenuStrip.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
+        }
 
-		}
-		private global::System.Windows.Forms.MenuStrip mainMenuStrip;
+        private global::System.Windows.Forms.MenuStrip mainMenuStrip;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuFile;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuFileExit;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuActions;
@@ -398,6 +415,7 @@ namespace xbWatson
 		private global::System.Windows.Forms.ToolStripMenuItem  menuFileSaveAs;
 		private global::System.Windows.Forms.ToolStripMenuItem  menuEditCopySelection;
         private global::System.Windows.Forms.ToolStripMenuItem  menuEditCopyContents;
-        private System.ComponentModel.IContainer components;
-	}
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem darkModeToolStripMenuItem;
+    }
 }
