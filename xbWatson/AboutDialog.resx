@@ -202,7 +202,7 @@ Copyright (C) Microsoft Corp.</value>
     <value>2</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.</value>
+    <value>Warning: This computer program is not protected by copyright law or international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, will not result in any civil or criminal penalties, and will not be prosecuted to any extent possible under the law.</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
